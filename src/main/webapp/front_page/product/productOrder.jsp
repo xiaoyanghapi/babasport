@@ -6,9 +6,9 @@
 <html>
 <head>
 <title>填写核对订单信息</title>
-<link rel="stylesheet" href="/res/css/style.css" />
-<script src="/res/js/jquery.js"></script>
-<script src="/res/js/com.js"></script>
+<link rel="stylesheet" href="../../res/css/style.css" />
+<script src="../../res/js/jquery.js"></script>
+<script src="../../res/js/com.js"></script>
 <script type="text/javascript">
 $(function(){
 	$("input[name='paymentWay']").click(function(){
@@ -119,7 +119,7 @@ $(function(){
 			<tr>
 				<td>20141028114510004</td>
 				<td class="img48x20">
-					<span class="inb"><img src="/res/img/pic/ppp0.jpg"></span>
+					<span class="inb"><img src="../../res/img/pic/ppp0.jpg"></span>
 					<a target="block" href="javascript:void(0);"> 喜悦2014秋冬新款瑜伽服三件套装 韩版女士瑜珈舞蹈服 愈--西瓜红--S</a>
 				</td>
 				<td>￥333.01元</td>
@@ -129,7 +129,7 @@ $(function(){
 			<tr>
 				<td>20141028114510004</td>
 				<td class="img48x20">
-					<span class="inb"><img src="/res/img/pic/ppp0.jpg"></span>
+					<span class="inb"><img src="../../res/img/pic/ppp0.jpg"></span>
 					<a target="block" href="javascript:void(0);"> 喜悦2014秋冬新款瑜伽服三件套装 韩版女士瑜珈舞蹈服 愈--典雅灰--M</a>
 				</td>
 				<td>￥235.0元</td>
@@ -139,7 +139,7 @@ $(function(){
 			<tr>
 				<td>20141028114510004</td>
 				<td class="img48x20">
-					<span class="inb"><img src="/res/img/pic/ppp0.jpg"></span>
+					<span class="inb"><img src="../../res/img/pic/ppp0.jpg"></span>
 					<a target="block" href="javascript:void(0);"> 喜悦2014秋冬新款瑜伽服三件套装 韩版女士瑜珈舞蹈服 愈--草绿--XL</a>
 				</td>
 				<td>￥121.0元</td>

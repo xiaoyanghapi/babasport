@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ include file="/back_page/head.jsp" %>
+<%@ include file="../../back_page/head.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -20,7 +20,7 @@
     font-size: 14px;
     font-weight: normal;
     border: 1px solid #C5C5C5;
-    background: url('/res/itcast/img/admin/bg_ch.gif') repeat-x scroll 0% 0% transparent;
+    background: url('../../res/itcast/img/admin/bg_ch.gif') repeat-x scroll 0% 0% transparent;
 }
 a {
     color: #06C;
@@ -44,7 +44,7 @@ $(function(){
 			tObj = $(this);
 			if(ref == '#tab_2'){
 				var fck = new FCKeditor("productdesc");
-				fck.BasePath = "/res/fckeditor/";
+				fck.BasePath = "../../res/fckeditor/";
 				fck.Height = 400 ;
 				fck.ReplaceTextarea();
 			}

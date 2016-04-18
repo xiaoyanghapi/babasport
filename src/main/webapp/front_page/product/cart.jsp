@@ -6,9 +6,9 @@
 <html>
 <head>
 <title>我的购物车</title>
-<link rel="stylesheet" href="/res/css/style.css" />
-<script src="/res/js/jquery.js"></script>
-<script src="/res/js/com.js"></script>
+<link rel="stylesheet" href="../../res/css/style.css" />
+<script src="../../res/js/jquery.js"></script>
+<script src="../../res/js/com.js"></script>
 <script type="text/javascript">
 //结算
 function trueBuy(){
@@ -65,7 +65,7 @@ function trueBuy(){
 					<td class="nwp pic">
 						<ul class="uls">
 							<li>
-								<a class="pic" title=" 喜悦2014秋冬新款瑜伽服三件套装 韩版女士瑜珈舞蹈服 愈加服正品送胸垫 酒红+黑+黑 M 开启年终大促 全场优惠到底 买贵就赔 支持货到付款" href="javascript:void(0)"><img alt=" 喜悦2014秋冬新款瑜伽服三件套装 韩版女士瑜珈舞蹈服 愈加服正品送胸垫 酒红+黑+黑 M 开启年终大促 全场优惠到底 买贵就赔 支持货到付款" src="/res/img/pic/ppp0.jpg"></a>
+								<a class="pic" title=" 喜悦2014秋冬新款瑜伽服三件套装 韩版女士瑜珈舞蹈服 愈加服正品送胸垫 酒红+黑+黑 M 开启年终大促 全场优惠到底 买贵就赔 支持货到付款" href="javascript:void(0)"><img alt=" 喜悦2014秋冬新款瑜伽服三件套装 韩版女士瑜珈舞蹈服 愈加服正品送胸垫 酒红+黑+黑 M 开启年终大促 全场优惠到底 买贵就赔 支持货到付款" src="../../res/img/pic/ppp0.jpg"></a>
 								<dl>
 									<dt><a title=" 喜悦2014秋冬新款瑜伽服三件套装 韩版女士瑜珈舞蹈服 愈加服正品送胸垫 酒红+黑+黑 M 开启年终大促 全场优惠到底 买贵就赔 支持货到付款" href="javascript:void(0)"> 喜悦2014秋冬新款瑜伽服三件套装 韩版女士瑜珈舞蹈服 愈加服正品送胸垫 酒红+黑+黑 M 开启年终大促 全场优惠到底 买贵就赔 支持货到付款--西瓜红--S</a></dt>
 									<dd><span class="red">【赠品】</span>
@@ -84,7 +84,7 @@ function trueBuy(){
 					<td class="nwp pic">
 						<ul class="uls">
 							<li>
-								<a class="pic" title=" 喜悦2014秋冬新款瑜伽服三件套装 韩版女士瑜珈舞蹈服 愈加服正品送胸垫 酒红+黑+黑 M 开启年终大促 全场优惠到底 买贵就赔 支持货到付款" href="#"><img alt=" 喜悦2014秋冬新款瑜伽服三件套装 韩版女士瑜珈舞蹈服 愈加服正品送胸垫 酒红+黑+黑 M 开启年终大促 全场优惠到底 买贵就赔 支持货到付款" src="/res/img/pic/ppp0.jpg"></a>
+								<a class="pic" title=" 喜悦2014秋冬新款瑜伽服三件套装 韩版女士瑜珈舞蹈服 愈加服正品送胸垫 酒红+黑+黑 M 开启年终大促 全场优惠到底 买贵就赔 支持货到付款" href="#"><img alt=" 喜悦2014秋冬新款瑜伽服三件套装 韩版女士瑜珈舞蹈服 愈加服正品送胸垫 酒红+黑+黑 M 开启年终大促 全场优惠到底 买贵就赔 支持货到付款" src="../../res/img/pic/ppp0.jpg"></a>
 								<dl>
 									<dt><a title=" 喜悦2014秋冬新款瑜伽服三件套装 韩版女士瑜珈舞蹈服 愈加服正品送胸垫 酒红+黑+黑 M 开启年终大促 全场优惠到底 买贵就赔 支持货到付款" href="#"> 喜悦2014秋冬新款瑜伽服三件套装 韩版女士瑜珈舞蹈服 愈加服正品送胸垫 酒红+黑+黑 M 开启年终大促 全场优惠到底 买贵就赔 支持货到付款--典雅灰--M</a></dt>
 									<dd><span class="red">【赠品】</span>
@@ -103,7 +103,7 @@ function trueBuy(){
 					<td class="nwp pic">
 						<ul class="uls">
 							<li>
-								<a class="pic" title=" 喜悦2014秋冬新款瑜伽服三件套装 韩版女士瑜珈舞蹈服 愈加服正品送胸垫 酒红+黑+黑 M 开启年终大促 全场优惠到底 买贵就赔 支持货到付款" href="#"><img alt=" 喜悦2014秋冬新款瑜伽服三件套装 韩版女士瑜珈舞蹈服 愈加服正品送胸垫 酒红+黑+黑 M 开启年终大促 全场优惠到底 买贵就赔 支持货到付款" src="/res/img/pic/ppp0.jpg"></a>
+								<a class="pic" title=" 喜悦2014秋冬新款瑜伽服三件套装 韩版女士瑜珈舞蹈服 愈加服正品送胸垫 酒红+黑+黑 M 开启年终大促 全场优惠到底 买贵就赔 支持货到付款" href="#"><img alt=" 喜悦2014秋冬新款瑜伽服三件套装 韩版女士瑜珈舞蹈服 愈加服正品送胸垫 酒红+黑+黑 M 开启年终大促 全场优惠到底 买贵就赔 支持货到付款" src="../../res/img/pic/ppp0.jpg"></a>
 								<dl>
 									<dt><a title=" 喜悦2014秋冬新款瑜伽服三件套装 韩版女士瑜珈舞蹈服 愈加服正品送胸垫 酒红+黑+黑 M 开启年终大促 全场优惠到底 买贵就赔 支持货到付款" href="#"> 喜悦2014秋冬新款瑜伽服三件套装 韩版女士瑜珈舞蹈服 愈加服正品送胸垫 酒红+黑+黑 M 开启年终大促 全场优惠到底 买贵就赔 支持货到付款--草绿--XL</a></dt>
 									<dd><span class="red">【赠品】</span>

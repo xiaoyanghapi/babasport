@@ -6,9 +6,9 @@
 <html>
 <head>
 <title>登录_新巴巴运动网</title>
-<link rel="stylesheet" href="/res/css/style.css" />
-<script src="/res/js/jquery.js"></script>
-<script src="/res/js/com.js"></script>
+<link rel="stylesheet" href="../../res/css/style.css" />
+<script src="../../res/js/jquery.js"></script>
+<script src="../../res/js/com.js"></script>
 </head>
 <body>
 <div class="bar"><div class="bar_w">
@@ -25,12 +25,12 @@
 </div></div>
 <div class="w loc">
 	<div class="h-title" id="logo">
-		<div class="h-logo l"><img src="/res/img/pic/logo-1.png"/></div>
+		<div class="h-logo l"><img src="../../res/img/pic/logo-1.png"/></div>
 		<div class="l" style="margin: 13px 10px;font-size: 20px;font-family: '微软雅黑';letter-spacing: 2px">欢迎登录</div>
 	</div>
 </div>
 <div class="sign">
-	<div class="l ad420x205"><a href="#" title="title"><img src="/res/img/pic/ppp0.jpg" width="400" height="400"/></a></div>
+	<div class="l ad420x205"><a href="#" title="title"><img src="../../res/img/pic/ppp0.jpg" width="400" height="400"/></a></div>
 	<div class="r">
 		<h2 title="登录新巴巴运动网">登录新巴巴运动网</h2>
 		<form id="jvForm" action="../buyer/index.jsp" method="post">

@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ include file="/back_page/head.jsp" %>
+<%@ include file="/../../back_page/head.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -42,7 +42,7 @@
 			<td><input type="checkbox" value="8" name="ids"/></td>
 			<td align="center">8</td>
 			<td align="center">金乐乐</td>
-			<td align="center"><img width="40" height="40" src="/res/img/pic/ppp0.jpg"/></td>
+			<td align="center"><img width="40" height="40" src="../../res/img/pic/ppp0.jpg"/></td>
 			<td align="center"></td>
 			<td align="center">99</td>
 			<td align="center">是</td>
@@ -55,7 +55,7 @@
 			<td><input type="checkbox" value="7" name="ids"/></td>
 			<td align="center">7</td>
 			<td align="center">喜悦瑜伽</td>
-			<td align="center"><img width="40" height="40" src="/res/img/pic/ppp0.jpg"/></td>
+			<td align="center"><img width="40" height="40" src="../../res/img/pic/ppp0.jpg"/></td>
 			<td align="center"></td>
 			<td align="center">99</td>
 			<td align="center">是</td>
@@ -68,7 +68,7 @@
 			<td><input type="checkbox" value="6" name="ids"/></td>
 			<td align="center">6</td>
 			<td align="center">丹璐斯</td>
-			<td align="center"><img width="40" height="40" src="/res/img/pic/ppp0.jpg"/></td>
+			<td align="center"><img width="40" height="40" src="../../res/img/pic/ppp0.jpg"/></td>
 			<td align="center"></td>
 			<td align="center">99</td>
 			<td align="center">是</td>
@@ -81,7 +81,7 @@
 			<td><input type="checkbox" value="5" name="ids"/></td>
 			<td align="center">5</td>
 			<td align="center">菩媞</td>
-			<td align="center"><img width="40" height="40" src="/res/img/pic/ppp0.jpg"/></td>
+			<td align="center"><img width="40" height="40" src="../../res/img/pic/ppp0.jpg"/></td>
 			<td align="center"></td>
 			<td align="center">99</td>
 			<td align="center">是</td>
@@ -94,7 +94,7 @@
 			<td><input type="checkbox" value="4" name="ids"/></td>
 			<td align="center">4</td>
 			<td align="center">伊朵莲</td>
-			<td align="center"><img width="40" height="40" src="/res/img/pic/ppp0.jpg"/></td>
+			<td align="center"><img width="40" height="40" src="../../res/img/pic/ppp0.jpg"/></td>
 			<td align="center"></td>
 			<td align="center">99</td>
 			<td align="center">是</td>
@@ -107,7 +107,7 @@
 			<td><input type="checkbox" value="3" name="ids"/></td>
 			<td align="center">3</td>
 			<td align="center">梵歌纳（vangona）</td>
-			<td align="center"><img width="40" height="40" src="/res/img/pic/ppp0.jpg"/></td>
+			<td align="center"><img width="40" height="40" src="../../res/img/pic/ppp0.jpg"/></td>
 			<td align="center"></td>
 			<td align="center">99</td>
 			<td align="center">是</td>
@@ -120,7 +120,7 @@
 			<td><input type="checkbox" value="2" name="ids"/></td>
 			<td align="center">2</td>
 			<td align="center">凯速（KANSOON）</td>
-			<td align="center"><img width="40" height="40" src="/res/img/pic/ppp0.jpg"/></td>
+			<td align="center"><img width="40" height="40" src="../../res/img/pic/ppp0.jpg"/></td>
 			<td align="center"></td>
 			<td align="center">99</td>
 			<td align="center">是</td>
@@ -133,7 +133,7 @@
 			<td><input type="checkbox" value="1" name="ids"/></td>
 			<td align="center">1</td>
 			<td align="center">依琦莲</td>
-			<td align="center"><img width="40" height="40" src="/res/img/pic/ppp0.jpg"/></td>
+			<td align="center"><img width="40" height="40" src="../../res/img/pic/ppp0.jpg"/></td>
 			<td align="center"></td>
 			<td align="center">99</td>
 			<td align="center">是</td>

@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ include file="/back_page/head.jsp" %>
+<%@ include file="../../back_page/head.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -71,7 +71,7 @@ function changePageNo(){
 			<td><input type="checkbox" name="ids" value="73"/></td>
 			<td>20141028114510003</td>
 			<td align="center">依琦莲2014瑜伽服套装新款 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色</td>
-			<td align="center"><img width="50" height="50" src="/res/img/pic/ppp0.jpg"/></td>
+			<td align="center"><img width="50" height="50" src="../../res/img/pic/ppp0.jpg"/></td>
 			<td align="center">是</td>
 			<td align="center">是</td>
 			<td align="center">是</td>
@@ -84,7 +84,7 @@ function changePageNo(){
 			<td><input type="checkbox" name="ids" value="73"/></td>
 			<td>20141028114411609</td>
 			<td align="center">依琦莲2014瑜伽服套装新款 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色</td>
-			<td align="center"><img width="50" height="50" src="/res/img/pic/ppp0.jpg"/></td>
+			<td align="center"><img width="50" height="50" src="../../res/img/pic/ppp0.jpg"/></td>
 			<td align="center">否</td>
 			<td align="center">是</td>
 			<td align="center">否</td>
@@ -97,7 +97,7 @@ function changePageNo(){
 			<td><input type="checkbox" name="ids" value="73"/></td>
 			<td>20141028114409502</td>
 			<td align="center">依琦莲2014瑜伽服套装新款 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色</td>
-			<td align="center"><img width="50" height="50" src="/res/img/pic/ppp0.jpg"/></td>
+			<td align="center"><img width="50" height="50" src="../../res/img/pic/ppp0.jpg"/></td>
 			<td align="center">否</td>
 			<td align="center">是</td>
 			<td align="center">否</td>
@@ -110,7 +110,7 @@ function changePageNo(){
 			<td><input type="checkbox" name="ids" value="73"/></td>
 			<td>20141028114407438</td>
 			<td align="center">依琦莲2014瑜伽服套装新款 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色</td>
-			<td align="center"><img width="50" height="50" src="/res/img/pic/ppp0.jpg"/></td>
+			<td align="center"><img width="50" height="50" src="../../res/img/pic/ppp0.jpg"/></td>
 			<td align="center">否</td>
 			<td align="center">是</td>
 			<td align="center">否</td>
@@ -123,7 +123,7 @@ function changePageNo(){
 			<td><input type="checkbox" name="ids" value="73"/></td>
 			<td>20141028114405217</td>
 			<td align="center">依琦莲2014瑜伽服套装新款 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色</td>
-			<td align="center"><img width="50" height="50" src="/res/img/pic/ppp0.jpg"/></td>
+			<td align="center"><img width="50" height="50" src="../../res/img/pic/ppp0.jpg"/></td>
 			<td align="center">否</td>
 			<td align="center">是</td>
 			<td align="center">否</td>

@@ -12,9 +12,9 @@
 
 
 <title>新巴巴运动网-商品详情页</title>
-<link rel="stylesheet" href="/res/css/style.css" />
-<script src="/res/js/jquery.js"></script>
-<script type="text/javascript" src="/res/js/com.js"></script>
+<link rel="stylesheet" href="../../res/css/style.css" />
+<script src="../../res/js/jquery.js"></script>
+<script type="text/javascript" src="../../res/js/com.js"></script>
 <style type="text/css">
 .changToRed {
 	border: 2px solid #e4393c;
@@ -73,7 +73,7 @@ function buy(){
 </div></div>
 <div class="w loc">
 	<div class="h-title">
-		<div class="h-logo"><a href="http://localhost:8080"><img src="/res/img/pic/logo-1.png" /></a></div>
+		<div class="h-logo"><a href="http://localhost:8080"><img src="../../res/img/pic/logo-1.png" /></a></div>
 	    <div class="h-search">
 	      	<input type="text" />
 	        <div class="h-se-btn"><a href="#">搜索</a></div>
@@ -87,7 +87,7 @@ function buy(){
 			<ul class="uls">
 				<li>
 					<a href="#" title="依琦莲2014瑜伽服套装新 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色 M全场支持货到付款 全网最低价 千人超高好评瑜伽服赶紧抢！全五分好评截图联系客服还返现五元">
-					<img src="/res/img/pic/p50x50.jpg" alt="依琦莲2014瑜伽服套装新 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色 M全场支持货到付款 全网最低价 千人超高好评瑜伽服赶紧抢！全五分好评截图联系客服还返现五元" /></a>
+					<img src="../../res/img/pic/p50x50.jpg" alt="依琦莲2014瑜伽服套装新 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色 M全场支持货到付款 全网最低价 千人超高好评瑜伽服赶紧抢！全五分好评截图联系客服还返现五元" /></a>
 					<p class="dt"><a href="#" title="依琦莲2014瑜伽服套装新 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色 M全场支持货到付款 全网最低价 千人超高好评瑜伽服赶紧抢！全五分好评截图联系客服还返现五元">依琦莲2014瑜伽服套装新 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色 M全场支持货到付款 全网最低价 千人超高好评瑜伽服赶紧抢！全五分好评截图联系客服还返现五元</a></p>
 					<p class="dd">
 						<b><var>¥128</var><span>x1</span></b>
@@ -96,7 +96,7 @@ function buy(){
 				</li>
 				<li>
 					<a href="#" title="依琦莲2014瑜伽服套装新 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色 M全场支持货到付款 全网最低价 千人超高好评瑜伽服赶紧抢！全五分好评截图联系客服还返现五元">
-					<img src="/res/img/pic/p50x50.jpg" alt="依琦莲2014瑜伽服套装新 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色 M全场支持货到付款 全网最低价 千人超高好评瑜伽服赶紧抢！全五分好评截图联系客服还返现五元" /></a>
+					<img src="../../res/img/pic/p50x50.jpg" alt="依琦莲2014瑜伽服套装新 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色 M全场支持货到付款 全网最低价 千人超高好评瑜伽服赶紧抢！全五分好评截图联系客服还返现五元" /></a>
 					<p class="dt"><a href="#" title="依琦莲2014瑜伽服套装新 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色 M全场支持货到付款 全网最低价 千人超高好评瑜伽服赶紧抢！全五分好评截图联系客服还返现五元">依琦莲2014瑜伽服套装新 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色 M全场支持货到付款 全网最低价 千人超高好评瑜伽服赶紧抢！全五分好评截图联系客服还返现五元</a></p>
 					<p class="dd">
 						<b><var>¥128</var><span>x1</span></b>
@@ -105,7 +105,7 @@ function buy(){
 				</li>
 				<li>
 					<a href="#" title="依琦莲2014瑜伽服套装新 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色 M全场支持货到付款 全网最低价 千人超高好评瑜伽服赶紧抢！全五分好评截图联系客服还返现五元">
-					<img src="/res/img/pic/p50x50.jpg" alt="依琦莲2014瑜伽服套装新 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色 M全场支持货到付款 全网最低价 千人超高好评瑜伽服赶紧抢！全五分好评截图联系客服还返现五元" /></a>
+					<img src="../../res/img/pic/p50x50.jpg" alt="依琦莲2014瑜伽服套装新 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色 M全场支持货到付款 全网最低价 千人超高好评瑜伽服赶紧抢！全五分好评截图联系客服还返现五元" /></a>
 					<p class="dt"><a href="#" title="依琦莲2014瑜伽服套装新 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色 M全场支持货到付款 全网最低价 千人超高好评瑜伽服赶紧抢！全五分好评截图联系客服还返现五元">依琦莲2014瑜伽服套装新 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色 M全场支持货到付款 全网最低价 千人超高好评瑜伽服赶紧抢！全五分好评截图联系客服还返现五元</a></p>
 					<p class="dd">
 						<b><var>¥128</var><span>x1</span></b>
@@ -114,7 +114,7 @@ function buy(){
 				</li>
 				<li>
 					<a href="#" title="依琦莲2014瑜伽服套装新 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色 M全场支持货到付款 全网最低价 千人超高好评瑜伽服赶紧抢！全五分好评截图联系客服还返现五元">
-					<img src="/res/img/pic/p50x50.jpg" alt="依琦莲2014瑜伽服套装新 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色 M全场支持货到付款 全网最低价 千人超高好评瑜伽服赶紧抢！全五分好评截图联系客服还返现五元" /></a>
+					<img src="../../res/img/pic/p50x50.jpg" alt="依琦莲2014瑜伽服套装新 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色 M全场支持货到付款 全网最低价 千人超高好评瑜伽服赶紧抢！全五分好评截图联系客服还返现五元" /></a>
 					<p class="dt"><a href="#" title="依琦莲2014瑜伽服套装新 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色 M全场支持货到付款 全网最低价 千人超高好评瑜伽服赶紧抢！全五分好评截图联系客服还返现五元">依琦莲2014瑜伽服套装新 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色 M全场支持货到付款 全网最低价 千人超高好评瑜伽服赶紧抢！全五分好评截图联系客服还返现五元</a></p>
 					<p class="dd">
 						<b><var>¥128</var><span>x1</span></b>
@@ -123,7 +123,7 @@ function buy(){
 				</li>
 				<li>
 					<a href="#" title="依琦莲2014瑜伽服套装新 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色 M全场支持货到付款 全网最低价 千人超高好评瑜伽服赶紧抢！全五分好评截图联系客服还返现五元">
-					<img src="/res/img/pic/p50x50.jpg" alt="依琦莲2014瑜伽服套装新 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色 M全场支持货到付款 全网最低价 千人超高好评瑜伽服赶紧抢！全五分好评截图联系客服还返现五元" /></a>
+					<img src="../../res/img/pic/p50x50.jpg" alt="依琦莲2014瑜伽服套装新 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色 M全场支持货到付款 全网最低价 千人超高好评瑜伽服赶紧抢！全五分好评截图联系客服还返现五元" /></a>
 					<p class="dt"><a href="#" title="依琦莲2014瑜伽服套装新 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色 M全场支持货到付款 全网最低价 千人超高好评瑜伽服赶紧抢！全五分好评截图联系客服还返现五元">依琦莲2014瑜伽服套装新 瑜珈健身服三件套 广场舞蹈服装 女瑜伽服送胸垫 长袖紫色 M全场支持货到付款 全网最低价 千人超高好评瑜伽服赶紧抢！全五分好评截图联系客服还返现五元</a></p>
 					<p class="dd">
 						<b><var>¥128</var><span>x1</span></b>
@@ -142,7 +142,7 @@ function buy(){
 <div class="w ofc mt">
 	<div class="l">
 		<div class="showPro">
-			<div class="big"><a id="showImg" class="cloud-zoom" href="/res/img/pic/ppp0.jpg" rel="adjustX:10,adjustY:-1"><img alt="" src="/res/img/pic/ppp0.jpg"></a></div>
+			<div class="big"><a id="showImg" class="cloud-zoom" href="../../res/img/pic/ppp0.jpg" rel="adjustX:10,adjustY:-1"><img alt="" src="../../res/img/pic/ppp0.jpg"></a></div>
 		</div>
 	</div>
 	<div class="r" style="width: 640px">
@@ -154,9 +154,9 @@ function buy(){
 			<li><label>库　　存：</label><span class="word" id="stockInventory">100</span><span class="word" >件</span></li>
 			<li><label>选择颜色：</label>
 				<div id="colors" class="pre spec">
-					<a onclick="colorToRed(this,9)" href="javascript:void(0)" title="西瓜红" class="changToRed"><img width="25" height="25" data-img="1" src="/res/img/pic/ppp00.jpg" alt="西瓜红 "><i>西瓜红</i></a>
-					<a onclick="colorToRed(this,11)" href="javascript:void(0)" title="墨绿" class="changToWhite"><img width="25" height="25" data-img="1" src="/res/img/pic/ppp00.jpg" alt="墨绿 "><i>墨绿</i></a>
-					<a onclick="colorToRed(this,18)" href="javascript:void(0)" title="浅粉" class="changToWhite"><img width="25" height="25" data-img="1" src="/res/img/pic/ppp00.jpg" alt="浅粉 "><i>浅粉</i></a>
+					<a onclick="colorToRed(this,9)" href="javascript:void(0)" title="西瓜红" class="changToRed"><img width="25" height="25" data-img="1" src="../../res/img/pic/ppp00.jpg" alt="西瓜红 "><i>西瓜红</i></a>
+					<a onclick="colorToRed(this,11)" href="javascript:void(0)" title="墨绿" class="changToWhite"><img width="25" height="25" data-img="1" src="../../res/img/pic/ppp00.jpg" alt="墨绿 "><i>墨绿</i></a>
+					<a onclick="colorToRed(this,18)" href="javascript:void(0)" title="浅粉" class="changToWhite"><img width="25" height="25" data-img="1" src="../../res/img/pic/ppp00.jpg" alt="浅粉 "><i>浅粉</i></a>
 				</div>
 			</li>
 			<li id="sizes"><label>尺　　码：</label>
@@ -181,7 +181,7 @@ function buy(){
 		<ul class="uls x_50x50">
 			<li>
 				<var class="sfont">1</var>
-				<a href="#" title="富一代" target="_blank" class="pic"><img src="/res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
+				<a href="#" title="富一代" target="_blank" class="pic"><img src="../../res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
 				<dl>
 					<!-- dt 8个文字+... -->
 					<dt><a href="#" title="依琦莲2014瑜伽服套装新" target="_blank">依琦莲2014瑜伽服套装新</a></dt>
@@ -190,7 +190,7 @@ function buy(){
 			</li>
 			<li>
 				<var class="sfont">2</var>
-				<a href="#" title="富一代" target="_blank" class="pic"><img src="/res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
+				<a href="#" title="富一代" target="_blank" class="pic"><img src="../../res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
 				<dl>
 					<!-- dt 8个文字+... -->
 					<dt><a href="#" title="依琦莲2014瑜伽服套装新" target="_blank">依琦莲2014瑜伽服套装新</a></dt>
@@ -199,7 +199,7 @@ function buy(){
 			</li>
 			<li>
 				<var class="sfont">3</var>
-				<a href="#" title="富一代" target="_blank" class="pic"><img src="/res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
+				<a href="#" title="富一代" target="_blank" class="pic"><img src="../../res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
 				<dl>
 					<!-- dt 8个文字+... -->
 					<dt><a href="#" title="依琦莲2014瑜伽服套装新" target="_blank">依琦莲2014瑜伽服套装新</a></dt>
@@ -207,7 +207,7 @@ function buy(){
 				</dl>
 			</li>
 			<li>
-				<a href="#" title="富一代" target="_blank" class="pic"><img src="/res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
+				<a href="#" title="富一代" target="_blank" class="pic"><img src="../../res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
 				<dl>
 					<!-- dt 8个文字+... -->
 					<dt><a href="#" title="依琦莲2014瑜伽服套装新" target="_blank">依琦莲2014瑜伽服套装新</a></dt>
@@ -215,7 +215,7 @@ function buy(){
 				</dl>
 			</li>
 			<li>
-				<a href="#" title="富一代" target="_blank" class="pic"><img src="/res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
+				<a href="#" title="富一代" target="_blank" class="pic"><img src="../../res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
 				<dl>
 					<!-- dt 8个文字+... -->
 					<dt><a href="#" title="依琦莲2014瑜伽服套装新" target="_blank">依琦莲2014瑜伽服套装新</a></dt>
@@ -223,7 +223,7 @@ function buy(){
 				</dl>
 			</li>
 			<li>
-				<a href="#" title="富一代" target="_blank" class="pic"><img src="/res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
+				<a href="#" title="富一代" target="_blank" class="pic"><img src="../../res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
 				<dl>
 					<!-- dt 8个文字+... -->
 					<dt><a href="#" title="依琦莲2014瑜伽服套装新" target="_blank">依琦莲2014瑜伽服套装新</a></dt>
@@ -231,7 +231,7 @@ function buy(){
 				</dl>
 			</li>
 			<li>
-				<a href="#" title="富一代" target="_blank" class="pic"><img src="/res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
+				<a href="#" title="富一代" target="_blank" class="pic"><img src="../../res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
 				<dl>
 					<!-- dt 8个文字+... -->
 					<dt><a href="#" title="依琦莲2014瑜伽服套装新" target="_blank">依琦莲2014瑜伽服套装新</a></dt>
@@ -244,7 +244,7 @@ function buy(){
 	<div class="box bg_white">
 		<ul class="uls x_50x50">
 			<li>
-				<a href="#" title="富一代" target="_blank" class="pic"><img src="/res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
+				<a href="#" title="富一代" target="_blank" class="pic"><img src="../../res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
 				<dl>
 					<!-- dt 8个文字+... -->
 					<dt><a href="#" title="依琦莲2014瑜伽服套装新" target="_blank">依琦莲2014瑜伽服套装新</a></dt>
@@ -252,7 +252,7 @@ function buy(){
 				</dl>
 			</li>
 			<li>
-				<a href="#" title="富一代" target="_blank" class="pic"><img src="/res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
+				<a href="#" title="富一代" target="_blank" class="pic"><img src="../../res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
 				<dl>
 					<!-- dt 8个文字+... -->
 					<dt><a href="#" title="依琦莲2014瑜伽服套装新" target="_blank">依琦莲2014瑜伽服套装新</a></dt>
@@ -260,7 +260,7 @@ function buy(){
 				</dl>
 			</li>
 			<li>
-				<a href="#" title="富一代" target="_blank" class="pic"><img src="/res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
+				<a href="#" title="富一代" target="_blank" class="pic"><img src="../../res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
 				<dl>
 					<!-- dt 8个文字+... -->
 					<dt><a href="#" title="依琦莲2014瑜伽服套装新" target="_blank">依琦莲2014瑜伽服套装新</a></dt>
@@ -268,7 +268,7 @@ function buy(){
 				</dl>
 			</li>
 			<li>
-				<a href="#" title="富一代" target="_blank" class="pic"><img src="/res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
+				<a href="#" title="富一代" target="_blank" class="pic"><img src="../../res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
 				<dl>
 					<!-- dt 8个文字+... -->
 					<dt><a href="#" title="依琦莲2014瑜伽服套装新" target="_blank">依琦莲2014瑜伽服套装新</a></dt>
@@ -276,7 +276,7 @@ function buy(){
 				</dl>
 			</li>
 			<li>
-				<a href="#" title="富一代" target="_blank" class="pic"><img src="/res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
+				<a href="#" title="富一代" target="_blank" class="pic"><img src="../../res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
 				<dl>
 					<!-- dt 8个文字+... -->
 					<dt><a href="#" title="依琦莲2014瑜伽服套装新" target="_blank">依琦莲2014瑜伽服套装新</a></dt>
@@ -284,7 +284,7 @@ function buy(){
 				</dl>
 			</li>
 			<li>
-				<a href="#" title="富一代" target="_blank" class="pic"><img src="/res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
+				<a href="#" title="富一代" target="_blank" class="pic"><img src="../../res/img/pic/ppp.jpg" alt="依琦莲2014瑜伽服套装新" /></a>
 				<dl>
 					<!-- dt 8个文字+... -->
 					<dt><a href="#" title="依琦莲2014瑜伽服套装新" target="_blank">依琦莲2014瑜伽服套装新</a></dt>
@@ -295,7 +295,7 @@ function buy(){
 	</div>
 	
 	<h2 class="h2 h2_l mt"><em title="商家精选">商家精选</em><cite></cite></h2>
-	<img src="/res/img/pic/ad200x75.jpg" alt="" />
+	<img src="../../res/img/pic/ad200x75.jpg" alt="" />
 </div>
 <div class="r wr">
 		<h2 class="h2 h2_ch mt"><em>
@@ -304,7 +304,7 @@ function buy(){
 			<a href="javascript:void(0);" title="包装清单" rel="#detailTab3">包装清单</a></em><cite></cite></h2>
 		<div class="box bg_white ofc">
 			<div id="detailTab1" class="detail">
-				<img src="/res/img/pic/p800b.jpg" /><img src="/res/img/pic/p800a.jpg" /><img src="/res/img/pic/p800c.jpg" /><img src="/res/img/pic/p800d.jpg" />
+				<img src="../../res/img/pic/p800b.jpg" /><img src="../../res/img/pic/p800a.jpg" /><img src="../../res/img/pic/p800c.jpg" /><img src="../../res/img/pic/p800d.jpg" />
 			</div>
 			
 			<div id="detailTab2" style="display:none">
