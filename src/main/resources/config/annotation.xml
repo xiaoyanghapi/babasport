@@ -10,5 +10,13 @@
      http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
      http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
-	<import resource="config/*.xml" />
+	
+	<!-- Spring 扫包注解 只扫service层 等 -->
+	<context:component-scan base-package="cn.itcast">
+	<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+	</context:component-scan>
+		
+	<!--不用扫包要  自动装配  扫包则不用 这里可以不配-->
+	<context:annotation-config/>
+	
 </beans>
