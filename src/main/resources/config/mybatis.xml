@@ -14,15 +14,15 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<!-- 引入数据源ref所值指的是jdbc中的id dataSource -->
 		<property name="dataSource" ref="dataSource"/>
-		<property name="mapperLocations" value="classpath:cn/itcase/core/dao/*.xml"/>
+		<property name="mapperLocations" value="classpath:cn/itcast/core/dao/*.xml"/>
 		<!-- 别名文件 -->
-		<property name="mapperLocations" value="classpath:cn.itcase.core.bean"/>
+		<property name="mapperLocations" value="classpath:cn.itcast.core.bean"/>
 	</bean>
 	
 	<!-- 扫包 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 	<!-- java 中的dao和resources中的dao在相同文件夹下上边的dao可以扫出所有的xml文件否则要精确到底层文件夹  -->
-	<property name="basePackage" value="cn.itcase.core.dao"></property>
+	<property name="basePackage" value="cn.itcast.core.dao"></property>
 	</bean>
 	
 
