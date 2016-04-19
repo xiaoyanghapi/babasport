@@ -14,9 +14,10 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<!-- 引入数据源ref所值指的是jdbc中的id dataSource -->
 		<property name="dataSource" ref="dataSource"/>
+		<!-- 扫xml -->
 		<property name="mapperLocations" value="classpath:cn/itcast/core/dao/*.xml"/>
 		<!-- 别名文件 -->
-		<property name="mapperLocations" value="classpath:cn.itcast.core.bean"/>
+		<property name="typeAliasesPackage" value="cn.itcast.core.bean"/>
 	</bean>
 	
 	<!-- 扫包 -->
