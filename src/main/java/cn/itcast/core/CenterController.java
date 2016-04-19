@@ -1,4 +1,4 @@
-package cn.itcase.core;
+package cn.itcast.core;
 
 import org.springframework.stereotype.Controller;
 
