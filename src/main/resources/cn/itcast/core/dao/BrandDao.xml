@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+
+
+<mapper namespace="cn.itcast.core.dao.product.BrandDao">
+	<!-- resultMap -->
+	<resultMap type="Brand" id="brand">
+		<result column="id" property="id"/>
+		<result column="name" property="name"/>
+		<result column="description" property="description"/>
+		<result column="img_url" property="imgUrl"/>
+		<result column="sort" property="sort"/>
+		<result column="is_display" property="isDisplay"/>
+	</resultMap>
+
+ 	<!-- 查询品牌  select都是用get*开始-->
+ 	<select id="getBrandListWithPage" parameterType="Brand" resultMap="brand">
+ 		select id,name ,description ,img_url, sort,is_display
+
+		from bbs_brand 
+		<where>
+			<if test="isDisplay != null">
+				is_display = #{isDisplay}
+			</if>
+			<if test="name != null">
+				and name = #{name}
+			</if>
+		
+		</where>
+		ORDER BY id DESC
+		
+		LIMIT 0,5
+ 	</select>
+ 	
+ 	<!-- 查询品牌总记录 -->
+ 	<select id="getBrandCount" parameterType="Brand" resultType="Integer">
+ 		select count(1)
+
+		from bbs_brand 
+		
+		<where>
+			<if test="isDisplay != null">
+				is_display = #{isDisplay}
+			</if>
+			<if test="name != null">
+				and name = #{name}
+			</if>
+		
+		</where>
+ 	</select>
+</mapper>
