@@ -17,8 +17,8 @@ import cn.itcast.core.service.TestTbService;
  * @ContextConfiguration(locations = "classpath:application-context.xml,后边可以跟很多")
  */
 public class TestTestTb extends SpringJunitTest{
-						@Autowired
-						private TestTbService testTbService;
+	@Autowired
+	private TestTbService testTbService;
 	@Test
 	public void testAdd() throws Exception {
 		TestTable testTable = new TestTable();
