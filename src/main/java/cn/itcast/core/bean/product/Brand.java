@@ -1,4 +1,7 @@
 package cn.itcast.core.bean.product;
+
+import org.apache.commons.lang3.StringUtils;
+
 /** 
  * 
  * @author 作者 yjj: 
@@ -14,14 +17,36 @@ public class Brand {
 	private Integer isDisplay;
 	
 	//页号
-	private Integer pageNo;
+	private Integer pageNo = 1;
+	
+	//开始行
+	private Integer startRow = 0;
+	
+	//条数
+	private Integer pageSize = 10;
 	
 	
 	
+	public Integer getStartRow() {
+		return startRow;
+	}
+	public void setStartRow(Integer startRow) {
+		this.startRow = startRow;
+	}
+	public Integer getPageSize() {
+		return pageSize;
+	}
+	public void setPageSize(Integer pageSize) {
+		//计算开始行
+		this.startRow = (pageNo -1 ) * pageSize;
+		this.pageSize = pageSize;
+	}
 	public Integer getPageNo() {
 		return pageNo;
 	}
 	public void setPageNo(Integer pageNo) {
+		//计算开始行
+		this.startRow = (pageNo-1) * pageSize;
 		this.pageNo = pageNo;
 	}
 	public Integer getId() {

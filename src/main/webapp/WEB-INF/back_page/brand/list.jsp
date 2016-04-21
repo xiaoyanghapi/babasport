@@ -10,16 +10,16 @@
 <div class="box-positon">
 	<div class="rpos">当前位置: 品牌管理 - 列表</div>
 	<form class="ropt">
-		<input class="add" type="button" value="添加" onclick="javascript:window.location.href='add.jsp'"/>
+		<input class="add" type="button" value="添加" onclick="javascript:window.location.href='toAdd.do'"/>
 	</form>
 	<div class="clear"></div>
 </div>
 <div class="body-box">
-<form action="v_list.shtml" method="post" style="padding-top:5px;">
-品牌名称: <input type="text" name="name"/>
-	<select >
-		<option value="1">是</option>
-		<option>不是</option>
+<form action="/brand/list.do" method="post" style="padding-top:5px;">
+品牌名称: <input type="text" name="name" value="${name}"/>
+	<select name="isDisplay">
+		<option value="1" <c:if test="${isDisplay==1}">selected="selected"</c:if>>是</option>
+		<option value="0" <c:if test="${isDisplay==0}">selected="selected"</c:if>>不是</option>
 	</select>
 	<input type="submit" class="query" value="查询"/>
 </form>
@@ -53,6 +53,13 @@
 			</c:forEach>
 	</tbody>
 </table>
+<div class="page pb15">
+	<span class="r inb_a page_b">
+		<c:forEach items="${pagination.pageView}" var="page">
+				${page}
+		</c:forEach>
+	</span>
+</div>
 <div style="margin-top:15px;"><input class="del-button" type="button" value="删除" onclick="optDelete();"/></div>
 </div>
 </body>

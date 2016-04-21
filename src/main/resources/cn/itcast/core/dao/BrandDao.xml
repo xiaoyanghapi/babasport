@@ -31,7 +31,7 @@
 		</where>
 		ORDER BY id DESC
 		
-		LIMIT 0,5
+		LIMIT #{startRow},#{pageSize}
  	</select>
  	
  	<!-- 查询品牌总记录 -->
@@ -50,4 +50,7 @@
 		
 		</where>
  	</select>
+ 	<!-- 添加按钮 -->
+ 	
+ 	
 </mapper>

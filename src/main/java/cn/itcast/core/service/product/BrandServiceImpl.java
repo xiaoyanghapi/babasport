@@ -27,8 +27,8 @@ public class BrandServiceImpl implements BrandService {
 	@Override
 	@Transactional(readOnly = true)
 	public Pagination getBrandListWithPage(Brand brand) {
-		//参数传递  1.起始页开始条 startRow = (pageNo - 1) * pageSize,2.每页条数,3总记录数
-		Pagination pagination = new Pagination((brand.getPageNo()-1)*5,5,brandDao.getBrandCount(brand));
+		//参数传递  1.起始页 startRow = (pageNo - 1) * pageSize,2.每页条数,3总记录数
+		Pagination pagination = new Pagination(brand.getPageNo(),brand.getPageSize(),brandDao.getBrandCount(brand));
 		//数据集合brand集合
 		pagination.setList(brandDao.getBrandListWithPage(brand));
 		

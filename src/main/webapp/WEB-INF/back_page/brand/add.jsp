@@ -4,6 +4,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>babasport-add</title>
+<script type="text/javascript">
+	//上传图片
+	function uploadPic() {
+		//定义参数
+		var options = {
+			url:"/upload/uploadPic.do",
+			dataType:"Json",
+			type:"post",
+			success:function(data){
+				//回调两个路径
+				
+			}
+		};
+		
+		//jquery.form使用
+		$("#jvForm").ajaxSubmit(options);
+	}
+
+
+</script>
 </head>
 <body>
 <div class="box-positon">
@@ -36,7 +56,7 @@
 					<td width="20%" class="pn-flabel pn-flabel-h"></td>
 						<td width="80%" class="pn-fcontent">
 						<img width="100" height="100" id="allImgUrl"/>
-						<input type="file" />
+						<input name="pic" type="file" onchange="uploadPic()"/>
 					</td>
 				</tr>
 				<tr>

@@ -1,7 +1,6 @@
 package cn.itcast.core.service;
 
 import javax.annotation.Resource;
-import javax.management.RuntimeErrorException;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -23,7 +22,7 @@ public class TestTbServiceImpl implements TestTbService {
 	@Override
 	public void addTestTb(TestTable testTable) {
 		testTbDao.addTestTb(testTable);
-//		throw new RuntimeException();
+		//		throw new RuntimeException();
 	}
 
 }
