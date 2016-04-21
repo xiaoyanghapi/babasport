@@ -50,7 +50,7 @@ public class ResponseUtils {
 	 * 返回值类型: void
 	 */
 	public static void renderXml(HttpServletResponse response,String text){
-		render(response, "application/json;charset=UTF-8", text);
+		render(response, "text/xml;charset=UTF-8", text);
 	}
 	/**
 	 * 发送TEXT
@@ -60,6 +60,6 @@ public class ResponseUtils {
 	 * 返回值类型: void
 	 */
 	public static void renderTest(HttpServletResponse response,String text){
-		render(response, "application/json;charset=UTF-8", text);
+		render(response, "text/plain;charset=UTF-8", text);
 	}
 }

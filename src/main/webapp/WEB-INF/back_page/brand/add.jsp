@@ -10,11 +10,12 @@
 		//定义参数
 		var options = {
 			url:"/upload/uploadPic.do",
-			dataType:"Json",
+			dataType:"json",
 			type:"post",
-			success:function(data){
+			success : function(data){
 				//回调两个路径
-				
+				$("#allImgUrl").attr("src",data.url);
+				$("#path").val(data.path);
 			}
 		};
 		
@@ -56,6 +57,7 @@
 					<td width="20%" class="pn-flabel pn-flabel-h"></td>
 						<td width="80%" class="pn-fcontent">
 						<img width="100" height="100" id="allImgUrl"/>
+						<input type="hidden" name="" id="path"/>
 						<input name="pic" type="file" onchange="uploadPic()"/>
 					</td>
 				</tr>

@@ -1,19 +1,21 @@
 package cn.itcast.core.controller.admin;
 
-import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
 
-import org.apache.commons.io.FileUtils;
+import javax.servlet.http.HttpServletResponse;
+
 import org.apache.commons.io.FilenameUtils;
+import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+
+import cn.itcast.comment.web.ResponseUtils;
 
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.WebResource;
@@ -28,8 +30,7 @@ import com.sun.jersey.api.client.WebResource;
 @Controller
 public class UploadController {
 	@RequestMapping(value = "/upload/uploadPic.do")
-	@ResponseBody
-	public void uploadPic(@RequestParam(required = false) MultipartFile pic) throws Exception{
+	public void uploadPic(HttpServletResponse response,@RequestParam(required = false) MultipartFile pic) throws Exception{
 //		获取扩展名通用   getOriginalFilename获取原始名字
 		String ext = FilenameUtils.getExtension(pic.getOriginalFilename());
 		
@@ -60,7 +61,10 @@ public class UploadController {
 			e.printStackTrace();
 		}
 //		返回两个路径
-		
+		JSONObject jo = new JSONObject();
+		jo.put("url", url);
+		jo.put("path", path);
+		ResponseUtils.renderJson(response,jo.toString());
 	}
 	
 }
