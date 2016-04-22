@@ -51,6 +51,14 @@ public interface BrandService {
 	 * 下午12:28:54
 	 * 返回值类型: void
 	 */
-	public void updateBrandByKey(Integer id);
+	public void updateBrandByKey(Brand brand);
+	/**
+	 * 获取一个品牌类
+	 * 编辑人:yjj
+	 * 2016年4月22日
+	 * 下午6:44:28
+	 * 返回值类型: void
+	 */
+	public Brand getBrandByKey(Integer id);
 	
 }

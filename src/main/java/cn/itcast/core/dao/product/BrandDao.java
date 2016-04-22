@@ -58,5 +58,14 @@ public interface BrandDao {
 	 * 下午12:12:07
 	 * 返回值类型: void
 	 */
-	public void updateBrandByKey(Integer id);
+	public void updateBrandByKey(Brand brand);
+	/**
+	 * 查询一个brand品牌
+	 * 编辑人:yjj
+	 * 2016年4月22日
+	 * 下午6:43:44
+	 * 返回值类型: void
+	 * @return 
+	 */
+	public Brand getBrandByKey(Integer id);
 }

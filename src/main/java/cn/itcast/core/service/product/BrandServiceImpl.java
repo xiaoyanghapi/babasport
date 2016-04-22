@@ -58,8 +58,15 @@ public class BrandServiceImpl implements BrandService {
 
 
 	@Override
-	public void updateBrandByKey(Integer id) {
-		brandDao.updateBrandByKey(id);		
+	public void updateBrandByKey(Brand brand) {
+		brandDao.updateBrandByKey(brand);		
+	}
+
+
+	@Override
+	@Transactional(readOnly = true)
+	public Brand getBrandByKey(Integer id) {
+		return brandDao.getBrandByKey(id);
 	}
 
 

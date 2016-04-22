@@ -141,5 +141,33 @@ public class BrandController {
 //		model.addAttribute("pageNo",pageNo);
 		return "redirect:/brand/list.do";
 	}
-	
+	/**
+	 * 去修改页面
+	 * 编辑人:yjj
+	 * 2016年4月22日
+	 * 下午6:53:47
+	 * 返回值类型: String
+	 */
+	@RequestMapping(value = "/brand/toEdit.do")
+	public String toEdit(ModelMap model,Integer id,String name,Integer pageNo){
+		Brand brand = brandService.getBrandByKey(id);
+		brand.setPageNo(pageNo);
+		model.addAttribute("brand", brand);
+		model.addAttribute("name", name);
+		return "/brand/editor";
+	}
+	/**
+	 * 修改
+	 * 编辑人:yjj
+	 * 2016年4月22日
+	 * 下午6:53:47
+	 * 返回值类型: String
+	 */
+	@RequestMapping(value = "/brand/edit.do")
+	public String edit(ModelMap model,Brand brand,String name,Integer pageNo){
+		brandService.updateBrandByKey(brand);
+		model.addAttribute("name", name);
+		model.addAttribute("pageNo", pageNo);
+		return "redirect:/brand/list.do";
+	}
 }
