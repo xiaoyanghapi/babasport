@@ -81,8 +81,8 @@ public class BrandController {
 		
 		
 		model.addAttribute("pagination",pagination);
-		model.addAttribute("name",name);
-		model.addAttribute("pageNo",pageNo);
+		model.addAttribute("name",brand.getName());
+		model.addAttribute("pageNo",brand.getPageNo());
 		model.addAttribute("isDisplay",brand.getIsDisplay());
 		return "brand/list";
 	}
@@ -149,12 +149,10 @@ public class BrandController {
 	 * 返回值类型: String
 	 */
 	@RequestMapping(value = "/brand/toEdit.do")
-	public String toEdit(ModelMap model,Integer id,String name,Integer pageNo){
+	public String toEdit(ModelMap model,Integer id){
 		Brand brand = brandService.getBrandByKey(id);
-		brand.setPageNo(pageNo);
 		model.addAttribute("brand", brand);
-		model.addAttribute("name", name);
-		return "/brand/editor";
+		return "/brand/edit";
 	}
 	/**
 	 * 修改
@@ -164,10 +162,8 @@ public class BrandController {
 	 * 返回值类型: String
 	 */
 	@RequestMapping(value = "/brand/edit.do")
-	public String edit(ModelMap model,Brand brand,String name,Integer pageNo){
+	public String edit(ModelMap model,Brand brand){
 		brandService.updateBrandByKey(brand);
-		model.addAttribute("name", name);
-		model.addAttribute("pageNo", pageNo);
 		return "redirect:/brand/list.do";
 	}
 }
