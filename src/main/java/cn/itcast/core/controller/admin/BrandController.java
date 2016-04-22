@@ -68,13 +68,13 @@ public class BrandController {
 		//如果页号为空或者小于一则赋值为1Pagination.cpn(pageNo)
 		//设置页数 设置每页大小时要先设置页数
 		brand.setPageSize(5);
-		//输入页数
+		//输入页号
 		brand.setPageNo(Pagination.cpn(pageNo));
 		//分页对象
 		Pagination pagination = brandService.getBrandListWithPage(brand);//request.setAttribute返回
 		
 		/**
-		 * 分页展示  /brand/list.do?name = & isDisplay = & pageNo = 2
+		 * 分页展示  /brand/list.do?name = ""& isDisplay = ""& pageNo = 2
 		 */
 		String url = "/brand/list.do";
 		pagination.pageView(url, params.toString());
@@ -82,9 +82,64 @@ public class BrandController {
 		
 		model.addAttribute("pagination",pagination);
 		model.addAttribute("name",name);
-		model.addAttribute("isDisplay",isDisplay);
+		model.addAttribute("pageNo",pageNo);
+		model.addAttribute("isDisplay",brand.getIsDisplay());
 		return "brand/list";
 	}
-	
+	/**
+	 * 添加品牌
+	 * 编辑人:yjj
+	 * 2016年4月22日
+	 * 上午9:44:46
+	 * 返回值类型: String
+	 */
+	@RequestMapping(value = "/brand/add.do")
+	public String addBrand(Brand brand,ModelMap model){
+		
+		brandService.addBrand(brand);
+		model.addAttribute("isDisplay",brand.getIsDisplay());
+		//重定向
+		return "redirect:/brand/list.do";
+	}
+	/**
+	 * 删除品牌
+	 * 编辑人:yjj
+	 * 2016年4月22日
+	 * 上午9:45:57
+	 * 返回值类型: String
+	 */
+	@RequestMapping(value = "/brand/delete.do")
+	public String deleteBrand(Integer id,String name,Integer isDisplay,ModelMap model,Integer pageNo){
+		
+		brandService.deleteBrandByKey(id);
+		if(StringUtils.isNotBlank(name)){
+			model.addAttribute("name",name);
+		}
+		if(null!=isDisplay){
+			model.addAttribute("isDisplay",isDisplay);
+		}
+		model.addAttribute("pageNo",pageNo);
+		return "redirect:/brand/list.do";
+	}
+	/**
+	 * 批量删除
+	 * 编辑人:yjj
+	 * 2016年4月22日
+	 * 下午5:32:59
+	 * 返回值类型: String
+	 */
+	@RequestMapping(value = "/brand/deletes.do")
+	public String deletes(Integer[] ids,String name,Integer isDisplay,ModelMap model){
+		
+		brandService.deleteBrandByKeys(ids);
+		if(StringUtils.isNotBlank(name)){
+			model.addAttribute("name",name);
+		}
+		if(null!=isDisplay){
+			model.addAttribute("isDisplay",isDisplay);
+		}
+//		model.addAttribute("pageNo",pageNo);
+		return "redirect:/brand/list.do";
+	}
 	
 }

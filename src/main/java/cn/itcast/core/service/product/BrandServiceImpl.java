@@ -1,7 +1,5 @@
 package cn.itcast.core.service.product;
 
-import java.util.List;
-
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -29,10 +27,42 @@ public class BrandServiceImpl implements BrandService {
 	public Pagination getBrandListWithPage(Brand brand) {
 		//参数传递  1.起始页 startRow = (pageNo - 1) * pageSize,2.每页条数,3总记录数
 		Pagination pagination = new Pagination(brand.getPageNo(),brand.getPageSize(),brandDao.getBrandCount(brand));
+		//获取总页数并给当前页数赋值
+		if(brand.getPageNo()>pagination.getTotalPage()){
+			brand.setPageNo(pagination.getTotalPage());
+		}
 		//数据集合brand集合
 		pagination.setList(brandDao.getBrandListWithPage(brand));
 		
 		return pagination;
 	}
+
+
+	@Override
+	public void addBrand(Brand brand) {
+		brandDao.addBrand(brand);
+		System.out.println("插入完成！");
+	}
+
+
+	@Override
+	public void deleteBrandByKey(Integer id) {
+		brandDao.deleteBrandByKey(id);		
+	}
+
+
+	@Override
+	public void deleteBrandByKeys(Integer[] ids) {
+		brandDao.deleteBrandByKeys(ids);		
+	}
+
+
+	@Override
+	public void updateBrandByKey(Integer id) {
+		brandDao.updateBrandByKey(id);		
+	}
+
+
+
 
 }

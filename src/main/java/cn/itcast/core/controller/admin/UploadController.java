@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import cn.itcast.comment.web.ResponseUtils;
+import cn.itcast.core.web.Constants;
 
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.WebResource;
@@ -48,7 +49,7 @@ public class UploadController {
 //		保存数据库
 		String path = "upload/"+format+"." + ext;
 		//给请求路径去发送
-		String url = "http://localhost:8088/image-web/"+path;
+		String url = Constants.IMG_URL+path;
 		//设置请求路径 具备发送图片的能力
 		WebResource resource = client.resource(url);
 		//读取图片到内存中

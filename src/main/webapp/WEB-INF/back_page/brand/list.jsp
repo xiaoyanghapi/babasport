@@ -5,6 +5,26 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <title>babasport-list</title>
+<script type="text/javascript">
+	//全选
+	function checkBox(name,checked){
+		//全选开始
+		$("input[name='"+name+"']").attr("checked",checked);
+	}
+	//多项删除
+	function optDelete(name,isDisplay){
+		if($("input[name='ids']:checked").size()<1){
+			alert("选择项为空，请选择需要删除的数据！")
+			return false;
+		}
+		if(confirm("你确定删除么？")){
+			//传递参数和页数
+			$("#jvForm").attr("action","/brand/deletes.do?name="+name+"&isDisplay="+isDisplay);
+			$("#jvForm").attr("method","post").submit();
+		}
+		
+	}
+</script>
 </head>
 <body>
 <div class="box-positon">
@@ -23,6 +43,7 @@
 	</select>
 	<input type="submit" class="query" value="查询"/>
 </form>
+<form id="jvForm">
 <table cellspacing="1" cellpadding="0" border="0" width="100%" class="pn-ltable">
 	<thead class="pn-lthead">
 		<tr>
@@ -42,17 +63,19 @@
 					<td><input type="checkbox" value="${entry.id}" name="ids"/></td>
 					<td align="center">${entry.id}</td>
 					<td align="center">${entry.name}</td>
-					<td align="center"><img width="40" height="40" src="/res/img/pic/ppp0.jpg"/></td>
+					<td align="center"><img width="40" height="40" src="${entry.allUrl}"/></td>
 					<td align="center">${entry.description}</td>
 					<td align="center">${entry.sort}</td>
 					<td align="center"><c:if test="${entry.isDisplay==1}">是</c:if><c:if test="${entry.isDisplay==0}">不是</c:if></td>
 					<td align="center">
-					<a class="pn-opt" href="#">修改</a> | <a class="pn-opt" onclick="if(!confirm('您确定删除吗？')) {return false;}" href="#">删除</a>
+					<!-- name赋值问题需要解决 -->
+					<a class="pn-opt" href="#">修改</a> | <a class="pn-opt" onclick="if(!confirm('您确定删除吗？')) {return false;}" href="/brand/delete.do?id=${entry.id}&name=${name}&isDisplay=${entry.isDisplay}&pageNo=${pageNo}">删除</a>
 					</td>
 				</tr>
 			</c:forEach>
 	</tbody>
 </table>
+</form>
 <div class="page pb15">
 	<span class="r inb_a page_b">
 		<c:forEach items="${pagination.pageView}" var="page">
@@ -60,7 +83,7 @@
 		</c:forEach>
 	</span>
 </div>
-<div style="margin-top:15px;"><input class="del-button" type="button" value="删除" onclick="optDelete();"/></div>
+<div style="margin-top:15px;"><input class="del-button" type="button" value="删除" onclick="optDelete('${name}','${isDisplay}');"/></div>
 </div>
 </body>
 </html>

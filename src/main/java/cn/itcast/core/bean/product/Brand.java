@@ -1,6 +1,7 @@
 package cn.itcast.core.bean.product;
 
-import org.apache.commons.lang3.StringUtils;
+import cn.itcast.core.web.Constants;
+
 
 /** 
  * 
@@ -24,6 +25,10 @@ public class Brand {
 	
 	//条数
 	private Integer pageSize = 10;
+	
+	public String getAllUrl(){
+		return Constants.IMG_URL+imgUrl;
+	}
 	
 	
 	

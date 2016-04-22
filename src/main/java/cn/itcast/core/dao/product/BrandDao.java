@@ -27,4 +27,36 @@ public interface BrandDao {
 	 * 返回值类型: int
 	 */
 	public int getBrandCount(Brand brand);
+	/**
+	 * 插入品牌
+	 * 编辑人:yjj
+	 * 2016年4月22日
+	 * 上午9:00:26
+	 * 返回值类型: void
+	 */
+	public void addBrand(Brand brand);
+	/**
+	 * 删除品牌
+	 * 编辑人:yjj
+	 * 2016年4月22日
+	 * 上午10:17:50
+	 * 返回值类型: void
+	 */
+	public void deleteBrandByKey(Integer id);
+	/**
+	 * 批量删除品牌
+	 * 编辑人:yjj
+	 * 2016年4月22日
+	 * 下午12:11:16
+	 * 返回值类型: void
+	 */
+	public void deleteBrandByKeys(Integer[] ids);
+	/**
+	 * 修改品牌
+	 * 编辑人:yjj
+	 * 2016年4月22日
+	 * 下午12:12:07
+	 * 返回值类型: void
+	 */
+	public void updateBrandByKey(Integer id);
 }
