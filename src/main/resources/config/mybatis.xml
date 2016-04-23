@@ -17,7 +17,7 @@
 		<!-- 扫xml -->
 		<property name="mapperLocations" value="classpath:cn/itcast/core/dao/*.xml"/>
 		<!-- 别名文件 -->
-		<property name="typeAliasesPackage" value="cn.itcast.core.bean"/>
+		<property name="typeAliasesPackage" value="cn.itcast.core.bean,cn.itcast.core.query"/>
 	</bean>
 	
 	<!-- 扫包 -->
