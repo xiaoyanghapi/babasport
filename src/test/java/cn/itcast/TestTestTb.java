@@ -1,6 +1,7 @@
 package cn.itcast;
 
 import java.util.Date;
+import java.util.List;
 
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,11 +20,18 @@ import cn.itcast.core.service.TestTbService;
 public class TestTestTb extends SpringJunitTest{
 	@Autowired
 	private TestTbService testTbService;
-	@Test
+/*	@Test
 	public void testAdd() throws Exception {
 		TestTable testTable = new TestTable();
 		testTable.setName("aaaa");
 		testTable.setBirthday(new Date());
 		testTbService.addTestTb(testTable);
+	}*/
+	@Test
+	public void testGet() throws Exception {
+		List<TestTable> testSelect = testTbService.testSelect();
+		for (TestTable testTable : testSelect) {
+			System.out.println(testTable);
+		}
 	}
 }

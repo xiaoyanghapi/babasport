@@ -18,17 +18,17 @@
 	<!-- 品牌BrandSelector -->
 	<sql id="brandSelector">
 		select
-		<if test="null != fields">
+		<if test="fields != null">
 		 	${fields}
 		</if>
-		<if test="null == fields">
+		<if test="fields == null">
 	 		id,name ,description ,img_url, sort,is_display
 	 	</if> 
 		from bbs_brand 
 	</sql>
 	
 	<!-- 查询所有的 -->
-	<select id="getBrandList" parameterType="BrandQuery" resultMap="brand">
+	<select id="getBrandList" parameterType="brandQuery" resultMap="brand">
 		<include refid="brandSelector"/>
 	</select>
 	

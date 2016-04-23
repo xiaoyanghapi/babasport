@@ -1,5 +1,7 @@
 package cn.itcast.core.service;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -23,6 +25,11 @@ public class TestTbServiceImpl implements TestTbService {
 	public void addTestTb(TestTable testTable) {
 		testTbDao.addTestTb(testTable);
 		//		throw new RuntimeException();
+	}
+
+	@Override
+	public List<TestTable> testSelect() {
+		return testTbDao.testSelect();
 	}
 
 }

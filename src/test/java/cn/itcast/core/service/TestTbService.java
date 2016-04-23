@@ -1,5 +1,7 @@
 package cn.itcast.core.service;
 
+import java.util.List;
+
 import cn.itcast.core.bean.TestTable;
 
 /** 
@@ -9,4 +11,5 @@ import cn.itcast.core.bean.TestTable;
  */
 public interface TestTbService {
 	public void addTestTb(TestTable testTable);
+	public List<TestTable> testSelect();
 }

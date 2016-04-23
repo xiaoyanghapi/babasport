@@ -26,8 +26,11 @@ public class TestBrand extends SpringJunitTest{
 		brandQuery.setFields("id");
 		List<Brand> brandList = brandService.getBrandList(brandQuery);
 		
-		for (Brand brand : brandList) {
-			System.out.println(brand);
+/*		Brand brand = new Brand();
+		brand.setName("金乐乐");
+		List<Brand> brandLists = brandService.getBrandLists(brand);*/
+		for (Brand brands : brandList) {
+			System.out.println(brands);
 		}
 		
 		

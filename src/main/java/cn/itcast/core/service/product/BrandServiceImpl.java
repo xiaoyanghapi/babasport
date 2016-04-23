@@ -74,11 +74,9 @@ public class BrandServiceImpl implements BrandService {
 
 
 	@Override
-	@Transactional(readOnly = true)
 	public List<Brand> getBrandList(BrandQuery brandQuery) {
 		return brandDao.getBrandList(brandQuery);
 	}
-
 
 
 

@@ -14,8 +14,15 @@ import cn.itcast.core.query.BrandQuery;
  * 
  */
 public interface BrandService {
-	
-	
+	/**
+	 * 查询所有品牌
+	 * 编辑人:Hapi
+	 * 2016-4-23
+	 * 下午11:55:01
+	 * @param brandQuery
+	 * @return
+	 * 返回值类型: List<Brand>
+	 */
 	public List<Brand> getBrandList(BrandQuery brandQuery);
 	/**
 	 * 分页查询品牌
