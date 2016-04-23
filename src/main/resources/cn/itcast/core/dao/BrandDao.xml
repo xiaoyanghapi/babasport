@@ -15,11 +15,27 @@
 		<result column="is_display" property="isDisplay"/>
 	</resultMap>
 
+	<!-- 品牌BrandSelector -->
+	<sql id="brandSelector">
+		select
+		<if test="null != fields">
+		 	${fields}
+		</if>
+		<if test="null == fields">
+	 		id,name ,description ,img_url, sort,is_display
+	 	</if> 
+		from bbs_brand 
+	</sql>
+	
+	<!-- 查询所有的 -->
+	<select id="getBrandList" parameterType="BrandQuery" resultMap="brand">
+		<include refid="brandSelector"/>
+	</select>
+	
  	<!-- 查询品牌  select都是用get*开始-->
  	<select id="getBrandListWithPage" parameterType="Brand" resultMap="brand">
  		select id,name ,description ,img_url, sort,is_display
-
-		from bbs_brand 
+		from bbs_brand
 		<where>
 			<if test="isDisplay != null">
 				is_display = #{isDisplay}
@@ -27,7 +43,6 @@
 			<if test="name != null">
 				and name = #{name}
 			</if>
-		
 		</where>
 		ORDER BY id DESC
 		

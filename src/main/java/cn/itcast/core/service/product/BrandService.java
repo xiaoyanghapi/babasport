@@ -1,7 +1,10 @@
 package cn.itcast.core.service.product;
 
+import java.util.List;
+
 import cn.itcast.common.page.Pagination;
 import cn.itcast.core.bean.product.Brand;
+import cn.itcast.core.query.BrandQuery;
 
 /** 
  * 
@@ -11,6 +14,9 @@ import cn.itcast.core.bean.product.Brand;
  * 
  */
 public interface BrandService {
+	
+	
+	public List<Brand> getBrandList(BrandQuery brandQuery);
 	/**
 	 * 分页查询品牌
 	 * 编辑人:yjj

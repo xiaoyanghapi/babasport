@@ -3,6 +3,7 @@ package cn.itcast.core.dao.product;
 import java.util.List;
 
 import cn.itcast.core.bean.product.Brand;
+import cn.itcast.core.query.BrandQuery;
 
 /** 
  * 
@@ -12,13 +13,21 @@ import cn.itcast.core.bean.product.Brand;
  */
 public interface BrandDao {
 	/**
-	 * 返回集合
+	 * 返回集合分页 limit 0,5集合
 	 * 编辑人:yjj
 	 * 2016年4月20日
 	 * 下午5:26:18
 	 * 返回值类型: List<Brand>
 	 */
 	public List<Brand> getBrandListWithPage(Brand brand);
+	/**
+	 * 
+	 * 编辑人:yjj
+	 * 2016年4月23日
+	 * 下午3:30:52
+	 * 返回值类型: List<Brand>
+	 */
+	public List<Brand> getBrandList(BrandQuery brandQuery);
 	/**
 	 * 查询总记录数
 	 * 编辑人:yjj
