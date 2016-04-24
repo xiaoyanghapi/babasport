@@ -26,10 +26,30 @@
 	 	</if> 
 		from bbs_brand 
 	</sql>
-	
+	<!-- 品牌条件 -->
+	<sql id="brandWhere">
+		<where>
+			<if test="isDisplay != null">
+				is_display = #{isDisplay}
+			</if>
+			<if test="name != null">
+				<if test="nameLike == true">
+					and name like "%"#{name}"%"
+				</if>
+				<if test="nameLike == false">
+					and name = #{name}
+				</if>
+			</if>
+		</where>
+	</sql>
+	<!-- brand品牌排序 -->
+	<sql id="brandOrderBy">
+		<if test=""></if>
+	</sql>
 	<!-- 查询所有的 -->
 	<select id="getBrandList" parameterType="brandQuery" resultMap="brand">
 		<include refid="brandSelector"/>
+		<include refid="brandWhere"/>
 	</select>
 	
  	<!-- 查询品牌  select都是用get*开始-->

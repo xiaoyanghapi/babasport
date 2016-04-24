@@ -23,7 +23,9 @@ public class TestBrand extends SpringJunitTest{
 	@Test
 	public void testGet() throws Exception {
 		BrandQuery brandQuery = new BrandQuery();
-		brandQuery.setFields("id");
+//		brandQuery.setFields("id");
+//		brandQuery.setNameLike(true);
+		brandQuery.setName("金乐乐");
 		List<Brand> brandList = brandService.getBrandList(brandQuery);
 		
 /*		Brand brand = new Brand();
