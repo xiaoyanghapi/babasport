@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import cn.itcast.common.page.Pagination;
 import cn.itcast.core.bean.product.Brand;
 import cn.itcast.core.dao.product.BrandDao;
-import cn.itcast.core.query.BrandQuery;
+import cn.itcast.core.query.product.BrandQuery;
 
 /** 
  * 

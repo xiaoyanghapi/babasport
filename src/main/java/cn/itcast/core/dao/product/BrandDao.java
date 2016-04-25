@@ -3,7 +3,7 @@ package cn.itcast.core.dao.product;
 import java.util.List;
 
 import cn.itcast.core.bean.product.Brand;
-import cn.itcast.core.query.BrandQuery;
+import cn.itcast.core.query.product.BrandQuery;
 
 /** 
  * 

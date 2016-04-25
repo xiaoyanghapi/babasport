@@ -42,14 +42,30 @@
 			</if>
 		</where>
 	</sql>
+
 	<!-- brand品牌排序 -->
 	<sql id="brandOrderBy">
-		<if test=""></if>
+		<if test="fieldOrders != null and fieldOrders.size >0">
+			order by 
+			<foreach collection="fieldOrders" item="fieldOrder" separator=",">
+				${fieldOrder.field} ${fieldOrder.order}
+			</foreach>			
+		</if>
 	</sql>
+	
+	<!-- limit -->
+	<sql id="brandLimit">
+		<if test="startRow != null">
+			LIMIT #{startRow},#{pageSize}
+		</if>
+	</sql>
+	
 	<!-- 查询所有的 -->
 	<select id="getBrandList" parameterType="brandQuery" resultMap="brand">
 		<include refid="brandSelector"/>
 		<include refid="brandWhere"/>
+		<include refid="brandOrderBy"/>
+		<include refid="brandLimit"/>
 	</select>
 	
  	<!-- 查询品牌  select都是用get*开始-->

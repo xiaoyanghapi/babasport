@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import cn.itcast.comment.junit.SpringJunitTest;
 import cn.itcast.core.bean.product.Brand;
-import cn.itcast.core.query.BrandQuery;
+import cn.itcast.core.query.product.BrandQuery;
 import cn.itcast.core.service.product.BrandService;
 
 /** 
@@ -23,9 +23,12 @@ public class TestBrand extends SpringJunitTest{
 	@Test
 	public void testGet() throws Exception {
 		BrandQuery brandQuery = new BrandQuery();
+		brandQuery.orderbyId(false);
 //		brandQuery.setFields("id");
 //		brandQuery.setNameLike(true);
 		brandQuery.setName("金乐乐");
+		brandQuery.setPageNo(2);
+		brandQuery.setPageSize(3);
 		List<Brand> brandList = brandService.getBrandList(brandQuery);
 		
 /*		Brand brand = new Brand();

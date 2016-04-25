@@ -21,7 +21,7 @@ public class Brand {
 	private Integer pageNo = 1;
 	
 	//开始行
-	private Integer startRow = 0;
+	private Integer startRow;
 	
 	//条数
 	private Integer pageSize = 10;

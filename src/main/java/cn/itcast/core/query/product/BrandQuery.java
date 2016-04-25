@@ -1,4 +1,4 @@
-package cn.itcast.core.query;
+package cn.itcast.core.query.product;
 
 import java.util.ArrayList;
 import java.util.List;

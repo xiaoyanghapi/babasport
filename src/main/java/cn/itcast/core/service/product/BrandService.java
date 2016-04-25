@@ -4,7 +4,7 @@ import java.util.List;
 
 import cn.itcast.common.page.Pagination;
 import cn.itcast.core.bean.product.Brand;
-import cn.itcast.core.query.BrandQuery;
+import cn.itcast.core.query.product.BrandQuery;
 
 /** 
  * 
