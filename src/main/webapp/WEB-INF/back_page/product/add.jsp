@@ -61,11 +61,13 @@ $(function(){
 	</form>
 	<div class="clear"></div>
 </div>
-<h2 class="h2_ch"><span id="tabs">
-<a href="javascript:void(0);" ref="#tab_1" title="基本信息" class="here">基本信息</a>
-<a href="javascript:void(0);" ref="#tab_2" title="商品描述" class="nor">商品描述</a>
-<a href="javascript:void(3);" ref="#tab_3" title="商品参数" class="nor">包装清单</a>
-</span></h2>
+<h2 class="h2_ch">
+	<span id="tabs">
+		<a href="javascript:void(0);" ref="#tab_1" title="基本信息" class="here">基本信息</a>
+		<a href="javascript:void(0);" ref="#tab_2" title="商品描述" class="nor">商品描述</a>
+		<a href="javascript:void(3);" ref="#tab_3" title="商品参数" class="nor">包装清单</a>
+	</span>
+</h2>
 <div class="body-box" style="float:right">
 	<form id="jvForm" action="add.do" method="post" enctype="multipart/form-data">
 		<table cellspacing="1" cellpadding="2" width="100%" border="0" class="pn-ftable">
