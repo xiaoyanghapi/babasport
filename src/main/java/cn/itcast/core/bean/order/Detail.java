@@ -1,6 +1,5 @@
 package cn.itcast.core.bean.order;
 
-import java.util.*;
 import java.io.Serializable;
 
 /**
