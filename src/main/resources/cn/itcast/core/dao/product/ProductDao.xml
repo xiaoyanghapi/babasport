@@ -300,7 +300,7 @@
 		<include refid="productListOrder" />
 	</select>
 	<!-- 添加 -->
-	<insert id="addProduct" parameterType="Product">
+	<insert id="addProduct" parameterType="Product" useGeneratedKeys="true" keyProperty="id">
 		INSERT INTO bbs_product
 		<trim prefix="(" suffix=")" suffixOverrides=",">
 				<if test="id != null">

@@ -34,7 +34,7 @@
 				</if>
 				</if>
 				<if test="parentId != null">
-					and parent_id=#{parentId}
+					and parent_id != #{parentId}
 				</if>
 				<if test="note != null">
 				<if test="noteLike == false">

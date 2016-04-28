@@ -2,6 +2,8 @@ package cn.itcast.core.bean.product;
 
 import java.io.Serializable;
 
+import cn.itcast.core.web.Constants;
+
 /**
  * 图片
  * @author lixu
@@ -18,6 +20,9 @@ public class Img implements Serializable {
 	private String url;
 	private Integer isDef;
 
+	public String getAllUrl(){
+		return Constants.IMG_URL+url;
+	}
 	public Integer getId() {
 		return id;
 	}

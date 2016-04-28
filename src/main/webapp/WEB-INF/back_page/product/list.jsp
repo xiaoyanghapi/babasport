@@ -9,20 +9,22 @@
 function getTableForm() {
 	return document.getElementById('tableForm');
 }
-function optDelete() {
+function changePageNo(){
+	$("input[name='pageNo']").val(1);
+}
+//上架按钮
+function isShow(pageNo,name,brandId,isShow) {
 	if(Pn.checkedCount('ids')<=0) {
 		alert("请至少选择一个!");
 		return;
 	}
-	if(!confirm("确定删除吗?")) {
+	if(!confirm("确定上架吗?")) {
 		return;
 	}
-	var f = getTableForm();
-	f.action="o_delete.do";
-	f.submit();
-}
-function changePageNo(){
-	$("input[name='pageNo']").val(1);
+	$("#jvForm").attr("action","isShow.do?pageNo="+pageNo+"&name="+name+"&brandId="+brandId+"&isShow="+isShow);
+	$("#jvForm").attr("method","post")
+	alert("isShow.do?pageNo="+pageNo+"&name="+name+"&brandId="+brandId+"&isShow="+isShow);
+	$("#jvForm").submit();
 }
 </script>
 </head>
@@ -30,7 +32,7 @@ function changePageNo(){
 <div class="box-positon">
 	<div class="rpos">当前位置: 商品管理 - 列表</div>
 	<form class="ropt">
-		<input class="add" type="button" value="添加" onclick="javascript:window.location.href='add.jsp'"/>
+		<input class="add" type="button" value="添加" onclick="javascript:window.location.href='toAdd.do'"/>
 	</form>
 	<div class="clear"></div>
 </div>
@@ -49,7 +51,7 @@ function changePageNo(){
 	</select>
 	<input type="submit" class="query" value="查询"/>
 </form>
-<form method="post" id="tableForm">
+<form id="jvForm">
 <input type="hidden" value="" name="pageNo"/>
 <input type="hidden" value="" name="queryName"/>
 <table cellspacing="1" cellpadding="0" width="100%" border="0" class="pn-ltable">
@@ -72,7 +74,7 @@ function changePageNo(){
 				<td><input type="checkbox" name="ids" value="${entry.id}"/></td>
 				<td>${entry.id}-${entry.no}</td>
 				<td align="center">${entry.name}</td>
-				<td align="center"><img width="50" height="50" src="/res/img/pic/ppp0.jpg"/></td>
+				<td align="center"><img width="50" height="50" src="${entry.img.allUrl}"/></td>
 				<td align="center" >
 					<c:if test="${entry.isNew==1}">是</c:if>
 					<c:if test="${entry.isNew==0}">不是</c:if>
@@ -103,7 +105,7 @@ function changePageNo(){
 		</c:forEach>
 	</span>
 </div>
-<div style="margin-top:15px;"><input class="del-button" type="button" value="删除" onclick="optDelete();"/><input class="add" type="button" value="上架" onclick="optDelete();"/><input class="del-button" type="button" value="下架" onclick="optDelete();"/></div>
+<div style="margin-top:15px;"><input class="del-button" type="button" value="删除" onclick="optDelete();"/><input class="add" type="button" value="上架" onclick="isShow('${pagination.pageNo}','${name}','${isShow}','${brandId}');"/><input class="del-button" type="button" value="下架" onclick="optDelete();"/></div>
 </form>
 </div>
 </body>
