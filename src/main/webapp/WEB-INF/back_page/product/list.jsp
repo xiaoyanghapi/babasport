@@ -6,12 +6,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <title>babasport-list</title>
 <script type="text/javascript">
-function getTableForm() {
-	return document.getElementById('tableForm');
-}
-function changePageNo(){
-	$("input[name='pageNo']").val(1);
-}
 //上架按钮
 function isShow(pageNo,name,brandId,isShow) {
 	if(Pn.checkedCount('ids')<=0) {
@@ -22,8 +16,8 @@ function isShow(pageNo,name,brandId,isShow) {
 		return;
 	}
 	$("#jvForm").attr("action","isShow.do?pageNo="+pageNo+"&name="+name+"&brandId="+brandId+"&isShow="+isShow);
-	$("#jvForm").attr("method","post")
-	alert("isShow.do?pageNo="+pageNo+"&name="+name+"&brandId="+brandId+"&isShow="+isShow);
+	//$("#jvForm").attr("method","post");
+	//alert("isShow.do?pageNo="+pageNo+"&name="+name+"&brandId="+brandId+"&isShow="+isShow);
 	$("#jvForm").submit();
 }
 </script>
@@ -51,7 +45,7 @@ function isShow(pageNo,name,brandId,isShow) {
 	</select>
 	<input type="submit" class="query" value="查询"/>
 </form>
-<form id="jvForm">
+<form method="post" id="jvForm">
 <input type="hidden" value="" name="pageNo"/>
 <input type="hidden" value="" name="queryName"/>
 <table cellspacing="1" cellpadding="0" width="100%" border="0" class="pn-ltable">

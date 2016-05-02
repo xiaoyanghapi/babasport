@@ -14,7 +14,7 @@
 	//多项删除
 	function optDelete(name,isDisplay){
 		if($("input[name='ids']:checked").size()<1){
-			alert("选择项为空，请选择需要删除的数据！")
+			alert("选择项为空，请选择需要删除的数据！");
 			return false;
 		}
 		if(confirm("你确定删除么？")){
