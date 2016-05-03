@@ -61,9 +61,9 @@ public class ProductController {
 	 * 返回值类型: String
 	 */
 	@RequestMapping(value = "/product/isShow.do")
-	public String isShow(ModelMap model,Integer[] ids,Integer pageNo,String name,Integer brandId,Integer isShow,HttpServletRequest request,HttpServletResponse response){
+	public String isShow(Integer[] ids,Integer pageNo,String name,Integer brandId,Integer isShow,HttpServletRequest request,HttpServletResponse response,ModelMap model){
 		Product product = new Product();
-		product.setIsShow(isShow);
+		product.setIsShow(1);
 		//上架
 		if(null != ids && ids.length > 0){
 			for (Integer id : ids) {
