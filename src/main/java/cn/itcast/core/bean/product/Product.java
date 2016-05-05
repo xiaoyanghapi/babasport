@@ -14,7 +14,11 @@ public class Product implements Serializable {
 	 * 序列化ID
 	 */
 	private static final long serialVersionUID = 1L;
-
+	/**
+	 * 前台每页数
+	 */
+	public static final  int FRONT_PAGE_SIZE = 8;
+	
 	private Integer id;
 	private String no;
 	private String name;
