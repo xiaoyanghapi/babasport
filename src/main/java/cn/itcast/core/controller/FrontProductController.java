@@ -74,7 +74,7 @@ public class FrontProductController{
 		List<Sku> skus = skuService.getSkuList(skuQuery);
 		List<Color> colors = new ArrayList<Color>();
 		for (Sku sku : skus) {
-			if(colors.contains(sku.getColor())){
+			if(!colors.contains(sku.getColor())){
 				colors.add(sku.getColor());
 			}
 		}
@@ -106,7 +106,7 @@ public class FrontProductController{
 		//设置每页数
 		productQuery.setPageSize(Product.FRONT_PAGE_SIZE);
 		//设置倒序排列
-		productQuery.orderbyBrandId(false);
+		productQuery.orderbyId(false);
 		
 		Boolean flag = false;
 		/**
