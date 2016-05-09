@@ -1,5 +1,6 @@
 package cn.itcast.core.controller;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
@@ -13,16 +14,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import cn.itcast.common.page.Pagination;
 import cn.itcast.core.bean.product.Brand;
+import cn.itcast.core.bean.product.Color;
 import cn.itcast.core.bean.product.Feature;
 import cn.itcast.core.bean.product.Product;
+import cn.itcast.core.bean.product.Sku;
 import cn.itcast.core.bean.product.Type;
 import cn.itcast.core.query.product.BrandQuery;
 import cn.itcast.core.query.product.FeatureQuery;
 import cn.itcast.core.query.product.ProductQuery;
+import cn.itcast.core.query.product.SkuQuery;
 import cn.itcast.core.query.product.TypeQuery;
 import cn.itcast.core.service.product.BrandService;
 import cn.itcast.core.service.product.FeatureService;
 import cn.itcast.core.service.product.ProductService;
+import cn.itcast.core.service.product.SkuService;
 import cn.itcast.core.service.product.TypeService;
 
 /** 
@@ -47,8 +52,38 @@ public class FrontProductController{
 	private TypeService typeService;
 	@Autowired
 	private FeatureService featureService;
+	@Autowired
+	private SkuService skuService;
 	/**
-	 * 
+	 * 商品详情页面
+	 * 编辑人:yjj
+	 * 2016年5月9日
+	 * 下午5:37:33
+	 * 返回值类型: String
+	 */
+	@RequestMapping(value = "/product/detail.shtml")
+	public String detail(ModelMap model,Integer productId){
+//		返回商品页面
+		Product product = productService.getProductByKey(productId);
+		model.addAttribute("product", product);
+		SkuQuery skuQuery = new SkuQuery();
+		skuQuery.setProductId(productId);
+		/**
+		 * 加载sku和颜色
+		 */
+		List<Sku> skus = skuService.getSkuList(skuQuery);
+		List<Color> colors = new ArrayList<Color>();
+		for (Sku sku : skus) {
+			if(colors.contains(sku.getColor())){
+				colors.add(sku.getColor());
+			}
+		}
+		model.addAttribute("colors", colors);
+		model.addAttribute("skus", skus);
+		return "product/productDetail";
+	}
+	/**
+	 * 商品列表页面
 	 * 编辑人:yjj
 	 * 2016年5月5日
 	 * 上午10:09:12

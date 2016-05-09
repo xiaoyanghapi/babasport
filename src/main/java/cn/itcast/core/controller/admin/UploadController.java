@@ -91,6 +91,9 @@ public class UploadController {
 			}catch (IOException e) {
 				e.printStackTrace();
 			}
+			/**
+			 * 难点
+			 */
 //			返回url给fck 用到java的jar包
 			UploadResponse ok = UploadResponse.getOK(url);
 //			response 返回对象
