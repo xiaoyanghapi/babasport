@@ -66,12 +66,10 @@ public class FrontProductController{
 //		返回商品页面
 		Product product = productService.getProductByKey(productId);
 		model.addAttribute("product", product);
-		SkuQuery skuQuery = new SkuQuery();
-		skuQuery.setProductId(productId);
 		/**
 		 * 加载sku和颜色
 		 */
-		List<Sku> skus = skuService.getSkuList(skuQuery);
+		List<Sku> skus = skuService.getStock(productId);
 		List<Color> colors = new ArrayList<Color>();
 		for (Sku sku : skus) {
 			if(!colors.contains(sku.getColor())){

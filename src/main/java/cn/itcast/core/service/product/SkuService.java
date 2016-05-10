@@ -68,4 +68,12 @@ public interface SkuService {
 	 */
 	public List<Sku> getSkuList(SkuQuery skuQuery);
 	
+	/**
+	 * 获取对应id下库存>0的
+	 * 编辑人:yjj
+	 * 2016年5月10日
+	 * 上午11:18:26
+	 * 返回值类型: List<Sku>
+	 */
+	public List<Sku> getStock(Integer productId);
 }

@@ -42,13 +42,132 @@
 </style>
 </head>
 <script type="text/javascript">
+//全局变量General
+var gnrColorId;
+//skuId
+var gnrSkuId;
+//限购
+var gnrSkuUpperLimit;
+//库存
+var gnrStock;
+//初始化
+$(function(){
+	$("#colors a:first").trigger("click");
+	//给a标签绑定onclick事件-
+	$("#sub").click(function(){
+		var num = $("#num").val();
+		if(num>1){
+			num--;
+			$("#num").val(num);
+		}else{
+			alert("此商品至少买一件！");
+		}
+	});
+	//+
+	$("#add").click(function(){
+		var num = $("#num").val();
+		if(num<gnrSkuUpperLimit&&num<gnrStock){
+			num++;
+			$("#num").val(num);
+		}else{
+			if(num==gnrStock){
+				alert("最多购买数量为"+gnrStock+"件");
+			}else if(num==gnrSkuUpperLimit){
+				alert("限购数量为"+gnrSkuUpperLimit+"件");
+			}
+		}
+	});
+}) 
+//加颜色边框
+function colorToRed(target,colorId){
+	gnrColorId = colorId;
+	//清理颜色
+	$("#colors a").each(function(){
+		$(this).attr("class","changToWhite");
+	});
+	//清理尺码
+	$("#sizes a").each(function(){
+		$(this).attr("class","not-allow");
+	});
+	$(target).attr("class","changToRed");
+ 	//控制尺码
+	var flag = 0;
+	<c:forEach items="${skus}" var="sku">
+		//判断sku中与当前选择的颜色id一样的，获取出所有尺码
+		if(colorId=='${sku.colorId}'){
+			//四次
+			if(flag==0){
+				$("#" + '${sku.size}').attr("class","changToRed");
+				flag=1;
+				//库存
+				$("#stockInventory").html('${sku.stockInventory}'+"件");
+				//运费
+				$("#deliveFee").html('${sku.deliveFee}'+"元");
+				//售价
+				$("#skuPrice").html("￥"+'${sku.skuPrice}');
+				//市场价
+				$("#marketPrice").html("￥"+'${sku.marketPrice}');
+				//skuId
+				gnrSkuId = ${sku.id};
+				//限购
+				gnrSkuUpperLimit = ${sku.skuUpperLimit};
+				//库存
+				gnrStock=${sku.stockInventory};
+				//重新赋值为1
+				$("#num").val(1);
+			}else{
+				$("#" + '${sku.size}').attr("class","changToWhite");
+			}
+		} 
+	</c:forEach>
+}
+ //点击尺码
+function sizeToRed(target,sizeId){
+	var cla1 = $(target).attr("class");
+	if(cla1=="not-allow"){
+		return;
+	}
+	$("#sizes a").each(function(){
+		var cla = $(this).attr("class");
+		if(cla!='not-allow'){
+			$(this).attr("class","changToWhite");
+		}
+	});
+	//变红
+	$(target).attr("class","changToRed");
+ 	//需要取颜色id颜色赋值
+	<c:forEach items="${skus}" var="sku">
+	if(gnrColorId=='${sku.colorId}'&&sizeId=='${sku.size}'){
+	//判断sku中与当前选择的颜色id一样的，获取出所有尺码
+		//库存
+		$("#stockInventory").html('${sku.stockInventory}'+"件");
+		//运费
+		$("#deliveFee").html('${sku.deliveFee}'+"元");
+		//售价
+		$("#skuPrice").html("￥"+'${sku.skuPrice}');
+		//市场价
+		$("#marketPrice").html("￥"+'${sku.marketPrice}');
+		//skuId
+		gnrSkuId = ${sku.id};
+		//限购
+		gnrSkuUpperLimit = ${sku.skuUpperLimit};
+		//库存
+		gnrStock=${sku.stockInventory};
+		//重新赋值为1
+		$("#num").val(1);
+		}
+	</c:forEach>
+} 
 //加入购物车
 function addCart(){
 	alert("添加购物车成功!");
 }
 //立即购买
 function buy(){
-	window.location.href='cart.jsp';
+	//条件skuId 限购   件数 
+	alert(gnrSkuId);
+	alert(gnrSkuUpperLimit);
+	//window.location.href='cart.jsp';
 }
 </script>
 </head>
@@ -148,23 +267,23 @@ function buy(){
 	<div class="r" style="width: 640px">
 		<ul class="uls form">
 			<li><h2>${product.name}</h2></li>
-			<li><label>巴  巴 价：</label><span class="word"><b class="f14 red mr">￥100</b>(市场价:<del>￥150.00</del>)</span></li>
+			<li><label>巴  巴 价：</label><span class="word"><b class="f14 red mr" id="skuPrice"></b>(市场价:<del id="marketPrice"></del>)</span></li>
 			<li><label>商品评价：</label><span class="word"><span class="val_no val3d4" title="4分">4分</span><var class="blue">(已有888人评价)</var></span></li>
-			<li><label>运　　费：</label><span class="word">10元</span></li>
-			<li><label>库　　存：</label><span class="word" id="stockInventory">100</span><span class="word" >件</span></li>
+			<li><label>运　　费：</label><span class="word" id="deliveFee"></span></li>
+			<li><label>库　　存：</label><span class="word" id="stockInventory"></span><span class="word" ></span></li>
 			<li><label>选择颜色：</label>
 				<div id="colors" class="pre spec">
 					<c:forEach items="${colors}" var="color">
-						<a onclick="colorToRed(this,9)" href="javascript:void(0)" title="西瓜红" class="changToRed"><img width="25" height="25" data-img="1" src="/res/img/pic/ppp00.jpg" alt="西瓜红 "><i>${color.name}</i></a>
+						<a onclick="colorToRed(this,${color.id})" href="javascript:void(0)" class="changToRed" title="西瓜红" ><img width="25" height="25" data-img="1" src="/res/img/pic/ppp00.jpg" alt="西瓜红 "><i>${color.name}</i></a>
 					</c:forEach>
 				</div>
 			</li>
 			<li id="sizes"><label>尺　　码：</label>
-						<a href="javascript:void(0)" class="not-allow"  id="S">S</a>
-						<a href="javascript:void(0)" class="not-allow"  id="M">M</a>
-						<a href="javascript:void(0)" class="not-allow"  id="L">L</a>
-						<a href="javascript:void(0)" class="not-allow"  id="XL">XL</a>
-						<a href="javascript:void(0)" class="not-allow"  id="XXL">XXL</a>
+						<a href="javascript:void(0)" class="not-allow"  id="S" onclick="sizeToRed(this,'S')">S</a>
+						<a href="javascript:void(0)" class="not-allow"  id="M" onclick="sizeToRed(this,'M')">M</a>
+						<a href="javascript:void(0)" class="not-allow"  id="L" onclick="sizeToRed(this,'L')">L</a>
+						<a href="javascript:void(0)" class="not-allow"  id="XL" onclick="sizeToRed(this,'XL')">XL</a>
+						<a href="javascript:void(0)" class="not-allow"  id="XXL" onclick="sizeToRed(this,'XXL')">XXL</a>
 			</li>
 			<li><label>我 要 买：</label>
 				<a id="sub" class="inb arr" style="border: 1px solid #919191;width: 10px;height: 10px;line-height: 10px;text-align: center;" title="减" href="javascript:void(0);" >-</a>
