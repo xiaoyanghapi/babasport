@@ -20,6 +20,19 @@ function isShow(pageNo,name,isShow,brandId) {
 	alert("isShow.do?pageNo="+ pageNo +"&name="+ name +"&brandId="+brandId+"&isShow="+isShow);
 	$("#jvForm").submit();
 }
+function isNotShow(pageNo,name,isShow,brandId) {
+	if(Pn.checkedCount('ids')<=0) {
+		alert("请至少选择一个!");
+		return;
+	}
+	if(!confirm("确定下架吗?")) {
+		return;
+	}
+	$("#jvForm").attr("action","isNotShow.do?pageNo="+ pageNo +"&name="+ name +"&brandId="+brandId+"&isShow="+isShow);
+	//$("#jvForm").attr("method","post");
+	alert("isShow.do?pageNo="+ pageNo +"&name="+ name +"&brandId="+brandId+"&isShow="+isShow);
+	$("#jvForm").submit();
+}
 </script>
 </head>
 <body>
@@ -84,7 +97,7 @@ function isShow(pageNo,name,isShow,brandId) {
 					<c:if test="${entry.isShow==0}">下架</c:if>
 				</td>
 				<td align="center">
-				<a href="#" class="pn-opt">查看</a> | <a href="#" class="pn-opt">修改</a> | <a href="#" onclick="if(!confirm('您确定删除吗？')) {return false;}" class="pn-opt">删除</a> | <a href="/sku/list.do?productId=${entry.id}&pno=${entry.no}" class="pn-opt">库存</a>
+				<a href="javascript:void(0)" onclick="window.open('/product/detail.shtml?productId=${entry.id}')" title="动态的页面" class="pn-opt">查看</a> | <a href="#" class="pn-opt">修改</a> | <a href="#" onclick="if(!confirm('您确定删除吗？')) {return false;}" class="pn-opt">删除</a> | <a href="/sku/list.do?productId=${entry.id}&pno=${entry.no}" class="pn-opt">库存</a>
 				</td>
 			</tr>
 		</c:forEach>
@@ -99,7 +112,7 @@ function isShow(pageNo,name,isShow,brandId) {
 </div>
 <div style="margin-top:15px;"><input class="del-button" type="button" value="删除" onclick="optDelete();"/>
 <input class="add" type="button" value="上架" onclick="isShow('${pagination.pageNo}','${name}','${isShow}','${brandId}');"/>
-<input class="del-button" type="button" value="下架" onclick="optDelete();"/></div>
+<input class="del-button" type="button" value="下架" onclick="isNotShow('${pagination.pageNo}','${name}','${isShow}','${brandId}');"/></div>
 </form>
 </div>
 </body>

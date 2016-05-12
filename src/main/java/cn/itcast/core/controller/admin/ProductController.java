@@ -1,6 +1,10 @@
 package cn.itcast.core.controller.admin;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,6 +22,7 @@ import cn.itcast.core.bean.product.Color;
 import cn.itcast.core.bean.product.Feature;
 import cn.itcast.core.bean.product.Img;
 import cn.itcast.core.bean.product.Product;
+import cn.itcast.core.bean.product.Sku;
 import cn.itcast.core.bean.product.Type;
 import cn.itcast.core.query.product.BrandQuery;
 import cn.itcast.core.query.product.ColorQuery;
@@ -28,7 +33,9 @@ import cn.itcast.core.service.product.BrandService;
 import cn.itcast.core.service.product.ColorService;
 import cn.itcast.core.service.product.FeatureService;
 import cn.itcast.core.service.product.ProductService;
+import cn.itcast.core.service.product.SkuService;
 import cn.itcast.core.service.product.TypeService;
+import cn.itcast.core.service.staticpage.StaticPageService;
 
 /** 
  * 
@@ -52,7 +59,10 @@ public class ProductController {
 	private FeatureService featureService;
 	@Autowired
 	private ColorService colorService;
-	
+	@Autowired
+	private SkuService skuService;
+	@Autowired
+	private StaticPageService staticPageService;
 
 	/**
 	 * 返回商品上架
@@ -71,12 +81,29 @@ public class ProductController {
 				product.setId(id);
 //				修改上级状态
 				productService.updateProductByKey(product);
+				/**
+				 * TODO 静态化
+				 */
+				Map<String, Object> map  = new HashMap<String, Object>();
+				Product prod = productService.getProductByKey(id);
+				map.put("product", prod);
+				/**
+				 * 加载sku和颜色
+				 */
+				List<Sku> skus = skuService.getStock(id);
+				List<Color> colors = new ArrayList<Color>();
+				
+				for (Sku sku : skus) {
+					if(!colors.contains(sku.getColor())){
+						colors.add(sku.getColor());
+					}
+					
+				}
+				map.put("colors", colors);
+				map.put("skus", skus);
+				staticPageService.produceStaticPage(map,("/product/"+id+".html"), "productDetail.html");
 			}
 		}
-		//TODO 静态化
-		
-		
-		
 		
 		/**
 		 * 判断页号为空
@@ -106,6 +133,63 @@ public class ProductController {
 		
 		return "redirect:/product/list.do";
 	}
+	
+	/**
+	 * 返回商品下架
+	 * 编辑人:yjj
+	 * 2016年4月28日
+	 * 下午2:15:13
+	 * 返回值类型: String
+	 */
+	@RequestMapping(value = "/product/isNotShow.do")
+	public String isNotShow(Integer[] ids,Integer pageNo,String name,Integer brandId,Integer isShow,HttpServletRequest request,HttpServletResponse response,ModelMap model){
+		Product product = new Product();
+		product.setIsShow(0);
+		//上架
+		if(null != ids && ids.length > 0){
+			for (Integer id : ids) {
+				product.setId(id);
+//				修改上级状态
+				productService.updateProductByKey(product);
+				/**
+				 * TODO 下架
+				 */
+				File file = new File(request.getServletContext().getRealPath("/html")+("/product/"+id+".html"));
+				if(file.exists()){
+					file.delete();
+				}
+			}
+		}
+		
+		/**
+		 * 判断页号为空
+		 */
+		if(null != pageNo){
+			model.addAttribute("pageNo", pageNo);
+		}
+		/**
+		 * 判断查询名字
+		 */
+		if(StringUtils.isNotBlank(name)){
+			model.addAttribute("name", name);
+		}
+		/**
+		 * 判断品牌id
+		 */
+		if(null != brandId){
+			model.addAttribute("brandId", brandId);
+		}
+		/**
+		 * 判断是否上架
+		 */
+		if(null != isShow){
+			model.addAttribute("isShow", isShow);
+		}	
+		
+		
+		return "redirect:/product/list.do";
+	}
+	
 	
 	/**
 	 * 去添加页面

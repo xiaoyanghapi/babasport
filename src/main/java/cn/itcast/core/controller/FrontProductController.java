@@ -29,6 +29,7 @@ import cn.itcast.core.service.product.FeatureService;
 import cn.itcast.core.service.product.ProductService;
 import cn.itcast.core.service.product.SkuService;
 import cn.itcast.core.service.product.TypeService;
+import cn.itcast.core.service.staticpage.StaticPageService;
 
 /** 
  * 
@@ -54,6 +55,8 @@ public class FrontProductController{
 	private FeatureService featureService;
 	@Autowired
 	private SkuService skuService;
+
+	
 	/**
 	 * 商品详情页面
 	 * 编辑人:yjj
@@ -71,10 +74,12 @@ public class FrontProductController{
 		 */
 		List<Sku> skus = skuService.getStock(productId);
 		List<Color> colors = new ArrayList<Color>();
+		
 		for (Sku sku : skus) {
 			if(!colors.contains(sku.getColor())){
 				colors.add(sku.getColor());
 			}
+			
 		}
 		model.addAttribute("colors", colors);
 		model.addAttribute("skus", skus);
@@ -105,6 +110,8 @@ public class FrontProductController{
 		productQuery.setPageSize(Product.FRONT_PAGE_SIZE);
 		//设置倒序排列
 		productQuery.orderbyId(false);
+		//加载上架的
+		productQuery.setIsShow(1);
 		
 		Boolean flag = false;
 		/**
