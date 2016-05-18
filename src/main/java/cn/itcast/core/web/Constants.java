@@ -11,5 +11,6 @@ public interface Constants {
 	 * 图片路径
 	 */
 	public static final String IMG_URL = "http://localhost:8088/image-web/";
+	public static final String BUYER_SESSION = "buyer_session";
 	
 }

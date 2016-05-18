@@ -13,4 +13,5 @@
 	
 	<!-- 用配置文件的方式 实例化SessionProvider -->
 	<bean name="sessionProvider" class="cn.itcast.comment.session.HttpSessionProvider"/>
+	<bean name="md5Pwd" class="cn.itcast.comment.encode.Md5PwdImpl"/>
 </beans>
