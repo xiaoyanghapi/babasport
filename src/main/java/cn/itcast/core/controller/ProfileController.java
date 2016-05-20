@@ -1,21 +1,21 @@
 package cn.itcast.core.controller;
 
-import java.io.Serializable;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang3.StringUtils;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.octo.captcha.service.image.ImageCaptchaService;
-
 import cn.itcast.comment.encode.Md5Pwd;
 import cn.itcast.comment.session.SessionProvider;
+import cn.itcast.comment.web.ResponseUtils;
 import cn.itcast.core.bean.country.City;
 import cn.itcast.core.bean.country.Province;
 import cn.itcast.core.bean.country.Town;
@@ -27,6 +27,8 @@ import cn.itcast.core.service.country.ProvinceService;
 import cn.itcast.core.service.country.TownService;
 import cn.itcast.core.service.user.BuyerService;
 import cn.itcast.core.web.Constants;
+
+import com.octo.captcha.service.image.ImageCaptchaService;
 
 /** 
  * 
@@ -195,8 +197,41 @@ public class ProfileController {
 	 */
 	@RequestMapping(value = "/buyer/deliver_address.shtml")
 	public String deliverAddress(){
-		
 		return "/buyer/deliver_address";
+	}
+	/**
+	 * 城市集合的json
+	 * 编辑人:Hapi
+	 * 2016-5-20
+	 * 上午9:41:52
+	 * @return
+	 * 返回值类型: String
+	 */
+	@RequestMapping(value = "/buyer/citys.shtml")
+	public void citys(String provinceCode,HttpServletResponse response){
+		CityQuery cityQuery = new CityQuery();
+		cityQuery.setProvince(provinceCode);
+		List<City> citys = cityService.getCityList(cityQuery);
+		JSONObject jb = new JSONObject();
+		jb.put("citys", citys);
+		ResponseUtils.renderJson(response,jb.toString());
+	}
+	/**
+	 * 乡镇集合的json
+	 * 编辑人:Hapi
+	 * 2016-5-20
+	 * 上午9:42:14
+	 * @return
+	 * 返回值类型: String
+	 */
+	@RequestMapping(value = "/buyer/towns.shtml")
+	public void towns(String cityCode,HttpServletResponse response){
+		TownQuery townQuery = new TownQuery();
+		townQuery.setCity(cityCode);
+		List<Town> towns = townService.getTownList(townQuery);
+		JSONObject jb = new JSONObject();
+		jb.put("towns", towns);
+		ResponseUtils.renderJson(response, jb.toString());
 	}
 	
 }

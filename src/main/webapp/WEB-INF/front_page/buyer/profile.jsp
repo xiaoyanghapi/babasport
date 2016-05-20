@@ -10,8 +10,35 @@
 <script src="/res/js/jquery.js"></script>
 <script src="/res/js/com.js"></script>
 <script type="text/javascript">
-function changeProvince() {
-	
+function changeProvince(code){
+	var url = "/buyer/citys.shtml";
+	var params ={'provinceCode':code};
+	//alert(123);
+	$.post(url,params,function(data){
+		var html = '<option value="" selected>城市</option>';
+		var htmlTown = '<option value="" selected>县/区</option>';
+		var citys = data.citys;
+		for ( var i = 0; i < citys.length; i++) {
+			html += '<option value='+citys[i].code+'>'+citys[i].name+'</option>';
+		};
+		//alert(html);
+		$("#city").html(html);
+		$("#town").html(htmlTown);
+	},"json");
+}
+function changeCity(code){
+	var url = "/buyer/towns.shtml";
+	var params ={'cityCode':code};
+	//alert(123);
+	$.post(url,params,function(data){
+		var html = '<option value="" selected>县/区</option>';
+		var towns = data.towns;
+		for ( var i = 0; i < towns.length; i++) {
+			html += '<option value='+towns[i].code+'>'+towns[i].name+'</option>';
+		};
+		//alert(html);
+		$("#town").html(html);
+	},"json");
 }
 
 
@@ -113,8 +140,8 @@ function changeProvince() {
 		<h2 class="h2 h2_l mt"><em title="账户管理">账户管理</em><cite>&nbsp;</cite></h2>
 		<div class="box bg_gray">
 			<ul class="ul left_nav">
-			<li><a href="../buyer/profile.jsp" title="个人资料">个人资料</a></li>
-			<li><a href="../buyer/deliver_address.jsp" title="收货地址">收货地址</a></li>
+			<li><a href="/buyer/profile.shtml" title="个人资料">个人资料</a></li>
+			<li><a href="/buyer/deliver_address.shtml" title="收货地址">收货地址</a></li>
 			<li><a href="../buyer/change_password.jsp" title="修改密码">修改密码</a></li>
 			</ul>
 		</div>
@@ -140,13 +167,13 @@ function changeProvince() {
 					</li>
 					<li>
 						<label for="realName">真实姓名：</label>
-						<span class="bg_text"><input type="text" id="realName" name="realName" maxLength="32" value="${buyer.real_name }"/></span>
+						<span class="bg_text"><input type="text" id="realName" name="realName" maxLength="32" value="${buyer.realName }"/></span>
 						<span class="pos"><span class="tip okTip">&nbsp;</span></span>
 					</li>
 					<li>
 						<label for="gender">性　　别：${buyer.gender.name}</label>
 						<span class="word">
-						<input type="radio" name="gender" value="SECRECY" <c:if test="${${buyer.gender=='SECRECY' }">checked="checked"</c:if>/>保密
+						<input type="radio" name="gender" value="SECRECY" <c:if test="${buyer.gender=='SECRECY' }">checked="checked"</c:if>/>保密
 						<input type="radio" name="gender" value="MAN" <c:if test="${buyer.gender=='MAN' }">checked="checked"</c:if>/>男
 						<input type="radio" name="gender" value="WOMAN" <c:if test="${buyer.gender=='WOMAN' }">checked="checked"</c:if>/>女
 						</span>
@@ -162,13 +189,13 @@ function changeProvince() {
 								
 								</c:forEach>
 							</select>
-							<select name="" id="city">
+							<select name="city" id="city" onchange="changeCity(this.value)">
 								<option value="" selected>城市</option>
 								<c:forEach items="${citys}" var="city">
 									<option value="${city.code}" <c:if test="${city.code==buyer.city}">selected</c:if>>${city.name}</option>
 								</c:forEach>
 							</select>
-							<select name="">
+							<select name="town" id="town">
 								<option value="" >县/区</option>
 								<c:forEach items="${towns}" var="town">
 									<option value="${town.code}" <c:if test="${town.code==buyer.town}">selected</c:if>>${town.name}</option>
