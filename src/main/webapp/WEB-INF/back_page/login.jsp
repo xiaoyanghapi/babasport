@@ -15,7 +15,7 @@ $(function() {
 });
 </script>
 <style type="text/css">
-body{margin:0;padding:0;font-size:12px;background:url(${base}/res/jeecms/img/login/bg.jpg) top repeat-x;}
+body{margin:0;padding:0;font-size:12px;background:url(/res/jeecms/img/login/bg.jpg) top repeat-x;}
 .input{width:150px;height:17px;border-top:1px solid #404040;border-left:1px solid #404040;border-right:1px solid #D4D0C8;border-bottom:1px solid #D4D0C8;}
 </style>
 </head>
@@ -32,16 +32,16 @@ body{margin:0;padding:0;font-size:12px;background:url(${base}/res/jeecms/img/log
         <tr>
           <td width="423" height="280" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
               <tr>
-                <td><img src="${base}/res/jeecms/img/login/ltop.jpg" /></td>
+                <td><img src="/res/jeecms/img/login/ltop.jpg" /></td>
               </tr>
               <tr>
-                <td><img src="${base}/res/jeecms/img/login/llogo.jpg" /></td>
+                <td><img src="/res/jeecms/img/login/llogo.jpg" /></td>
               </tr>
             </table></td>
-          <td width="40" align="center" valign="bottom"><img src="${base}/res/jeecms/img/login/line.jpg" width="23" height="232" /></td>
+          <td width="40" align="center" valign="bottom"><img src="/res/jeecms/img/login/line.jpg" width="23" height="232" /></td>
           <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
               <tr>
-                <td height="90" align="center" valign="bottom"><img src="${base}/res/jeecms/img/login/ltitle.jpg" /></td>
+                <td height="90" align="center" valign="bottom"><img src="/res/jeecms/img/login/ltitle.jpg" /></td>
               </tr>
               <tr>
                 <td>
@@ -63,7 +63,7 @@ body{margin:0;padding:0;font-size:12px;background:url(${base}/res/jeecms/img/log
                     </tr>
                     <#if errorRemaining?? && errorRemaining<=0>
                     <tr>
-                    	<td colspan="2" align="center"><img src="${base}/captcha.svl" onclick="this.src='${base}/captcha.svl?d='+new Date()*1"/></td>
+                    	<td colspan="2" align="center"><img src="/captcha.svl" onclick="this.src='/captcha.svl?d='+new Date()*1"/></td>
                     </tr>
                     <tr>
                       <td height="40" align="right"><strong><@s.m "login.captcha"/>ï¼</strong></td>
@@ -72,8 +72,8 @@ body{margin:0;padding:0;font-size:12px;background:url(${base}/res/jeecms/img/log
                     </#if>
                     <tr>
                       <td height="40" colspan="2" align="center">
-					    <input type="image" src="${base}/res/jeecms/img/login/login.jpg" name="submit" />
-                        &nbsp; &nbsp; <img name="reg" style="cursor: pointer" src="${base}/res/jeecms/img/login/reset.jpg" onclick="document.forms[0].reset()" /> </td>
+					    <input type="image" src="/res/jeecms/img/login/login.jpg" name="submit" />
+                        &nbsp; &nbsp; <img name="reg" style="cursor: pointer" src="/res/jeecms/img/login/reset.jpg" onclick="document.forms[0].reset()" /> </td>
                     </tr>
                   </table></td>
               </tr>

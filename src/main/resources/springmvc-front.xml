@@ -21,5 +21,18 @@
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 	
+	<!-- SpringMvc映射器   登陆在这里拦截-->
+	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping">
+		<property name="interceptors">
+			<list>
+				<bean class="cn.itcast.core.controller.SpringMvcInterceptor">
+					<property name="isAdmin" value="1"/>
+				</bean>
+			</list>
+		</property>
+	</bean>
+	<!-- SpringMvc适配器 -->
+	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"/>
+	
 	
 </beans>
